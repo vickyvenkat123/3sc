@@ -10,9 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
-  
-  ],
+    LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
