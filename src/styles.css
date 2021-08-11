@@ -2,5 +2,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif} 
+body { 
+    background: #E0EAFC; 
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); 
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC)} 
     

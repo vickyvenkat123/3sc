@@ -1,0 +1,52 @@
+.bodybg-color{
+    background: #E0EAFC; 
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); 
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC)
+}
+
+      .sidebar {
+        width: 200px;
+        min-height: 100vh;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+    ol, ul, dl {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .sidebar .nav-item .nav-link {
+        text-align: inherit;
+        padding: 0.75rem 1rem;
+        color: black;
+    }
+    .sidebar .nav-item .nav-link, .topbar .nav-item .nav-link {
+        position: relative;
+    }
+    .nav-shipping {
+        text-align: center;
+        text-transform: none;
+        border-radius: 7px;
+       
+        background: black;
+        color: white;
+        }
+        ol, ul, dl {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
