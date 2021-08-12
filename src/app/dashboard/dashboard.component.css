@@ -1,12 +1,18 @@
-.bodybg-color{
-    background: #E0EAFC; 
-    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); 
-    background: linear-gradient(to right, #CFDEF3, #E0EAFC)
+.outer-dashboard .inner-dashboard{
+    border: 1px solid #e7e8ea;
+    padding: 25px;
+    border-radius: 12px;
+    
+    min-height: 90vh;
+    margin: 35px;
+    background:azure;
 }
+
 
       .sidebar {
         width: 200px;
-        min-height: 100vh;
+        min-height: 70vh;
+        
     }
     .navbar-nav {
         display: flex;
@@ -14,31 +20,31 @@
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
+        font-family: ui-monospace;
+    
+      
+        
     }
-    ol, ul, dl {
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
+    
     .sidebar .nav-item .nav-link {
         text-align: inherit;
         padding: 0.75rem 1rem;
         color: black;
     }
     .sidebar .nav-item .nav-link, .topbar .nav-item .nav-link {
-        position: relative;   
+        position: relative;  
+        color: rgba(3, 3, 3, 0.993); 
     }
     .nav-shipping {
         text-align: center;
         text-transform: none;
         border-radius: 7px;
-       
+       width: fit-content;
         background: black;
         color: white;
         }
-        ol, ul, dl {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
         
         
+        
+       
         

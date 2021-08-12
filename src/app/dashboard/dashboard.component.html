@@ -1,122 +1,61 @@
-<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: white ">
-    <img src="/assets/images/Logo.png" style="margin-top: -30px; margin-left: -15px; margin-bottom: -80px;">
-    <br>
-    <br>
-    <br>
-    <div class="nav-shipping">
-        <i class='fas fa-box'></i>
-       <span> My shippings</span>
-    </div>
-    <li class="nav-item">
-        <a class="nav-link" href="/ControlTower/Masters">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Masters</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Upload Documents</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Show Documents</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>LR Generate</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Audit Reports</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-             <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Exception Resolution</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Alert & Notifications</span>
-        </a>
-    </li>
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="/ControlTower/Masters">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span (click)="navigateMasters()">Masters</span>
-        </a>
-    </li>
+<div class="outer-dashboard" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="14px">
+    <div class="inner-dashboard" fxLayout="column" fxFlex="95" fxLayout.xs="column">
+        <div fxLayout="row">
 
-    <hr class="sidebar-divider">
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Upload Documents</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/ControlTower/Upload_Invoice">Upload Invoice</a>
-                <a class="collapse-item" href="/ControlTower/Upload_LR">Upload LR</a>
-                <a class="collapse-item" href="/ControlTower/Upload_PO">Upload PO</a>
-                <a class="collapse-item" href="/ControlTower/Upload_POD">Upload POD</a>
-                <a class="collapse-item" href="/ControlTower/Upload_Contract">Upload Contract</a>
-            </div>
+            <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar"
+                style="background-color: white ">
+                <img src="/assets/images/Logo.png" style="margin-top: -30px; margin-left: -15px; margin-bottom: -80px;">
+                <br>
+                <br>
+                <br>
+                <div class="nav-shipping" fxLayout="column" fxFlex="10">
+                    <i class='fas fa-box'></i>
+                    <span> My shippings</span>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link">
+
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Masters</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Upload Documents</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Show Documents</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>LR Generate</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Audit Reports</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Exception Resolution</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Alert & Notifications</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </li>
-    <hr class="sidebar-divider">
-    <li class="nav-item">
-
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo1" aria-expanded="true"
-            aria-controls="collapseTwo1">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Show Documents</span>
-        </a>
-        <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/ControlTower/Show_Invoice">Show Invoice</a>
-                <a class="collapse-item" href="/ControlTower/Show_LR">Show LR</a>
-                <a class="collapse-item" href="/ControlTower/Show_POD">Show POD</a>
-            </div>
-        </div> -->
-    <!-- </li> -->
-
-    <!-- <hr class="sidebar-divider">
-    <li class="nav-item">
-        <a class="nav-link" href="/ControlTower/LRGenerate">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>LR Generate</span>
-        </a>
-    </li>
-    <hr class="sidebar-divider">
-    <li class="nav-item">
-        <a class="nav-link" href="/ControlTower/AuditReports">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Audit Reports</span>
-        </a>
-    </li>
-    <hr class="sidebar-divider" />
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Exception Resolution</span>
-        </a>
-    </li>
-    <hr class="sidebar-divider" />
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Alert & Notifications</span>
-        </a>
-    </li> -->
-</ul>
-
+    </div>
+</div>

@@ -3,7 +3,6 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
 html, body { height: 100%; }
 body { 
-    background: #E0EAFC; 
-    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC); 
-    background: linear-gradient(to right, #CFDEF3, #E0EAFC)} 
+background-color: lightblue;    
+} 
     

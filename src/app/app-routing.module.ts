@@ -6,12 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { MastersComponent } from './masters/masters.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: "login", component: LoginComponent },
   { path: "", redirectTo: "login", pathMatch: "full"},
-  {path: 'home', component:HomeComponent},
-  {path: 'dashboard', component:DashboardComponent},
-  {path: '**', component:DashboardComponent},
-  {path: 'masters', component:MastersComponent}
+  {path: "home", component:HomeComponent},
+  {path: "dashboard", component:DashboardComponent,
+  children:[
+    {path: "masters", component:MastersComponent}
+  ],
+  }
 ];
 
 @NgModule({
