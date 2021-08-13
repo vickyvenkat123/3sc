@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
+import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
     DashboardComponent,
     MastersComponent,
     HeaderComponent,
+    UploadDocsComponent,
   ],
   imports: [
     BrowserModule,
