@@ -1,19 +1,62 @@
-<div fxLayoutAlign="space-around">
+<div fxLayout="row" fxLayoutAlign="space-between">
   <div fxLayout="column" class="shipping-details">
-    <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="space-evenly center" class="vertical-menu">
-      <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
-      <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
+    <div
+      class="col-xs-12 col-md-12 col-lg-12"
+      fxLayout="row"
+      fxLayoutAlign="space-evenly center"
+      class="vertical-menu"
+    >
+      <a
+        class=""
+        [ngClass]="{ active: showLastShipping }"
+        (click)="showLastShippingStatus()"
+        >Last Shipping</a
+      >
+      <a
+        class=""
+        [ngClass]="{ active: showArchive }"
+        (click)="showArchiveStatus()"
+        >Archive</a
+      >
     </div>
-    <div fxLayout="column" class="shipping-details">
-      <div *ngIf="showLastShipping" class="">
-        <mat-card>Last Shiping</mat-card>
+    <div fxLayout="column">
+      <div *ngIf="showLastShipping" class="shipping-details">
+        <mat-card class="address-card">
+          <div fxLayout="column">
+            <div class="">20 5432 4932 3494</div>
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div>
+                  <div class="address-country">New York</div>
+                  <div class="delivery-date">April 29</div>
+                </div>
+                <div>
+                  <div class="address-country">New York</div>
+                  <div class="delivery-date">April 29</div>
+                </div>
+              </div>
+          </div>
+        </mat-card>
         <!-- <app-last-shipping
           [priorityData]="priorityData"
         >
         </app-last-shipping> -->
       </div>
-      <div *ngIf="showArchive" class="">
-        <mat-card>Archive</mat-card>
+      <div *ngIf="showArchive" class="shipping-details">
+        <mat-card class="address-card">
+          <div fxLayout="column">
+            <div class="">20 5432 4932 2222</div>
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div>
+                  <div class="address-country">New York</div>
+                  <div class="delivery-date">April 29</div>
+                </div>
+                <div>
+                  <div class="address-country">Boston</div>
+                  <div class="delivery-date">April 29</div>
+                </div>
+              </div>
+          </div>
+        </mat-card>
         <!-- <app-archive
           [priorityData]="priorityData"
         >
@@ -21,48 +64,82 @@
       </div>
     </div>
   </div>
-  
+
   <div fxFlex="70" flexLayout="column">
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
-        <i class='fas fa-box'></i>
+        <i class="fas fa-box"></i>
         <span>Shipping info</span>
       </div>
       <div class="manage-shipping" fxFlex="100" fxLayoutAlign="end start">
-        <i class='fas fa-pen'></i>
+        <i class="fas fa-pen"></i>
         <span>Manage Shipping</span>
       </div>
     </div>
-    <div class="shipping-card" flexLayout="column">
+    <div class="shipping-card">
       <mat-card class="shipping">
-        <div flexLayout="row">
-          <div fxLayoutAlign="start start">
-            <!-- <div flexLayout="column">
-         <img src="/assets/images/watch.jfif" style="width: 60%; height: 40%;">
-        </div> -->
-            <h5>imageS</h5>
+        <div flexLayout="row" class="details">
+          <div fxFlex="20" class="image">
+            <img src="../../assets/images/watch.jfif" height="100" />
           </div>
-          <div fxFlex="70" fxLayoutAlign="center center">
-            <h6>Seller</h6>
-          </div>
-          <div fxLayoutAlign="end start">
-            <h6>Number</h6>
+          <div class="item-details">
+            <div class="product-title" fxFlex="45">
+              <span class="product-name">
+              Apple watch
+              </span>
+            <span class="product-tag">
+              Blue Aluminum Case with Solo Loop
+            </span>
+            </div>
+            <div class="product-title" fxFlex="25">
+              <span class="product-name">
+                Seller
+              </span>
+            <span class="product-tag">
+              ROZETKA
+            </span>
+            </div>
+            <div class="product-title" fxFlex="25">
+              <span class="product-name">
+              Order Number
+              </span>
+            <span class="product-tag">
+             01234
+            </span>
+            </div>
+            <div class="product-title" fxFlex="45">
+              <span class="product-name">
+              Apple watch
+              </span>
+            <span class="product-tag">
+              Blue Aluminum Case with Solo Loop
+            </span>
+            </div>
+            <div class="product-title" fxFlex="40">
+              <span class="product-name">
+              Apple watch
+              </span>
+            <span class="product-tag">
+              Blue Aluminum Case with Solo Loop
+            </span>
+            </div>
           </div>
         </div>
       </mat-card>
-    </div><br>
+    </div>
+    <br />
     <div class="shipping-track" flexLayout="column">
       <mat-card class="shipping-track">tracking</mat-card>
-    </div><br>
+    </div>
+    <br />
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
-        <i class='fas fa-map'></i>
+        <i class="fas fa-map"></i>
         <span>Track on the map</span>
       </div>
       <div fxFlex="100" fxLayoutAlign="end start">
         <span>Open full map</span>
       </div>
-
     </div>
   </div>
   <!-- <div fxflex="80" fxLayout="row" fxLayoutAlign="start start">

@@ -11,5 +11,7 @@ export class UploadDocsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  myFunction(){
+    
+  }
 }

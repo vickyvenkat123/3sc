@@ -1,78 +1,79 @@
+<div fxLayout="row">
+  <div fxLayout="column" style="width: 20%">
+    <app-header></app-header>
+  
+      <ul class="navbar-nav sidebar sidebar-dark accordion">
+        <li class="nav-item" [ngClass]="{'active-link': step==='step1'}" (click)="step='step1'">
+            <a class="nav-link">
+          <i class="fas fa-box"></i>
+          <span> My shippings</span>
+            </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step2'}" (click)="step='step2'">
+          <a [ngClass]="{'active-link': step==='step2', 'nav-link': step !='step2'}" routerLink="/dashboard/masters">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Masters</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step3'}" (click)="step='step3'">
+          <a [ngClass]="{'active-link': step==='step3', 'nav-link': step !='step3'}"  routerLink="/dashboard/uploaddocs">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Upload Documents</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step4'}" (click)="step='step4'">
+          <a [ngClass]="{'active-link': step==='step4', 'nav-link': step !='step4'}" routerLink="/dashboard/masters">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Show Documents</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step5'}" (click)="step='step5'">
+          <a class="nav-link" routerLink="/dashboard/masters">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>LR Generate</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step6'}" (click)="step='step6'">
+          <a class="nav-link" routerLink="/dashboard/masters">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Audit Reports</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step7'}" (click)="step='step7'">
+          <a class="nav-link" routerLink="/dashboard/masters">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Exception Resolution</span>
+          </a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active-link': step==='step8'}" (click)="step='step8'">
+          <a class="nav-link" routerLink="">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Alert & Notifications</span>
+          </a>
+        </li>
+      </ul>
 
-    
-        <div fxLayout="row">
-            <div  fxLayout="column" style="width: 20%;">
-            <app-header></app-header>
-            <div class="" id="accordionSidebar"
-                style="background-color: white;">
-                <ul class="navbar-nav sidebar sidebar-dark accordion">
-                    <li class="nav-shipping">
-                        <i class='fas fa-box'></i>
-                        <span> My shippings</span>
-                    </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/masters">
+  </div>
+  <div class="container-fluid page-content">
+    <div class="row"  style="margin: 0;" fxLayoutAlign="start">
+      <div fxFlex="25" style="padding-left: 0" class="form-group col-xs-3">
+        <div class="inner-addon right-addon">
+          <i class="glyphicon glyphicon-search"></i>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for shipping address"
+          />
+        </div>
+      </div>
 
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Masters</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/uploaddocs">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Upload Documents</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/masters">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Show Documents</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/masters">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>LR Generate</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/masters">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Audit Reports</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/dashboard/masters">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Exception Resolution</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" routerLink="">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Alert & Notifications</span>
-                    </a>
-                </li>
-            </ul>
-            </div>
-        </div>
-            <div class="container-fluid page-content">
-                <div class="row" style="margin: 0;" fxLayoutAlign="start">
-                    <div fxFlex="20" class="form-group col-xs-3">
-                        <div class="inner-addon right-addon">
-                            <i class="glyphicon glyphicon-search"></i>
-                            <input type="text" class="form-control" placeholder="Search for shipping address" />
-                          </div>
-                    </div>
-              
-                    <div  fxFlex="80" class="form-group col-xs-3" fxLayoutAlign="end start">
-                  <h4>Devansh Verma</h4>
-                  <img src="/assets/images/User.png" style="width: 25px; height: 25px;">
-                    </div>
-                  </div>
-                <div class="page-panel">
-                    <router-outlet></router-outlet>
-                </div>
-            </div>
-        </div>
-    
+      <div fxFlex="75" class="form-group col-xs-3" fxLayoutAlign="end start">
+        <h4>Devansh Verma</h4>
+        <img src="/assets/images/User.png" style="width: 25px; height: 25px" />
+      </div>
+    </div>
+    <div class="page-panel">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

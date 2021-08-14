@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   constructor(private router: Router, @Inject(DOCUMENT) private _document,private renderer: Renderer2 ) {}
-  
+  step:any = "step1";
   ngOnInit(): void {
     //this._document.body.classList.add('bodybg-color');
     //this._document.body.style.background = '#fff';
