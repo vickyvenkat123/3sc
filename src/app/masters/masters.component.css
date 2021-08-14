@@ -39,8 +39,6 @@ border: 2px solid pink; */
 }
 .shipping-card{
   flex-direction: row;
-
-
 }
 agm-map {
   height: 300px;
@@ -53,4 +51,8 @@ agm-map {
 .shipping-track{
 height: 70px;
 border-radius: 10px;
+}
+.manage-shipping{
+  color: pink;
+  align-items: baseline;
 }

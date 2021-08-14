@@ -21,43 +21,38 @@
       </div>
     </div>
   </div>
+  
   <div fxFlex="70" flexLayout="column">
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
         <i class='fas fa-box'></i>
         <span>Shipping info</span>
       </div>
-      <div fxFlex="100" fxLayoutAlign="end start">
+      <div class="manage-shipping" fxFlex="100" fxLayoutAlign="end start">
         <i class='fas fa-pen'></i>
         <span>Manage Shipping</span>
       </div>
     </div>
     <div class="shipping-card" flexLayout="column">
       <mat-card class="shipping">
-      <div flexLayout="row">
-     <div fxLayoutAlign="start start">
-      <!-- <div flexLayout="column">
+        <div flexLayout="row">
+          <div fxLayoutAlign="start start">
+            <!-- <div flexLayout="column">
          <img src="/assets/images/watch.jfif" style="width: 60%; height: 40%;">
         </div> -->
-        <h5>imageS</h5>
-     </div>
-     <div fxFlex="70"fxLayoutAlign="center center">
-      <h6>Seller</h6>
-    </div>
-    <div fxLayoutAlign="end start">
-      <h6>Number</h6>
-    </div>
-    <!-- <div flexLayout="column">
-      <div flexLayout="row" fxFlex="">
-        <img src="/assets/images/watch.jfif" style="width: 60%; height: 40%;">
-      </div> -->
-
-    </div>
-      </div>
-    </mat-card>
+            <h5>imageS</h5>
+          </div>
+          <div fxFlex="70" fxLayoutAlign="center center">
+            <h6>Seller</h6>
+          </div>
+          <div fxLayoutAlign="end start">
+            <h6>Number</h6>
+          </div>
+        </div>
+      </mat-card>
     </div><br>
     <div class="shipping-track" flexLayout="column">
-      <mat-card  class="shipping-track">mat mat-card</mat-card>
+      <mat-card class="shipping-track">tracking</mat-card>
     </div><br>
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
@@ -65,13 +60,9 @@
         <span>Track on the map</span>
       </div>
       <div fxFlex="100" fxLayoutAlign="end start">
-         <span>Open full map</span>
+        <span>Open full map</span>
       </div>
-      <div flexLayout="column">
-        <agm-map [latitude]="latitude" [longitude]="longitude" (click)="onChoseLocation($event)">
-          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-        </agm-map>
-      </div>
+
     </div>
   </div>
   <!-- <div fxflex="80" fxLayout="row" fxLayoutAlign="start start">

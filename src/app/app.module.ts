@@ -13,7 +13,7 @@ import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { MaterialModule } from './material.module';
-import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +32,7 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     MaterialModule,
     FlexLayoutModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA6Tn3VmxnOAAzsanPRpBPXN29dWlpVd54'
-    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
