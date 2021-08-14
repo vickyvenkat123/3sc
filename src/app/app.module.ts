@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
+
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
+import { MaterialModule } from './material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { UploadDocsComponent } from './upload-docs/upload-docs.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    MatCardModule,
+    MaterialModule,
     FlexLayoutModule
   ],
   providers: [],

@@ -1,1 +1,27 @@
-<p>masters works!</p>
+<div fxLayoutAlign="space-around">
+<div  fxLayout="column" class="shipping-details">
+    <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="space-evenly center" class="vertical-menu">
+        <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
+        <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
+    </div>
+    <div  fxLayout="column" class="shipping-details">
+      <div  *ngIf="showLastShipping" class="">
+        <mat-card>Last Shiping</mat-card>
+        <!-- <app-last-shipping
+          [priorityData]="priorityData"
+        >
+        </app-last-shipping> -->
+      </div>
+      <div  *ngIf="showArchive" class="">
+        <mat-card>Archive</mat-card>
+        <!-- <app-archive
+          [priorityData]="priorityData"
+        >
+        </app-archive> -->
+      </div>
+    </div>
+</div>
+<div fxFlex="80">
+    <mat-card>Simple card</mat-card>
+</div>
+</div>

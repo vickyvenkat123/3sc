@@ -1,8 +1,6 @@
 .outer-dashboard .inner-dashboard {
     border: 1px solid #e7e8ea;
     border-radius: 12px;
-  
-    min-height: 90vh;
     margin: 35px;
     background: azure;
   }

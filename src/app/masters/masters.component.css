@@ -1,0 +1,33 @@
+
+
+
+/* border-radius: 10px;
+background: white;
+color: pink;
+padding: 5px;
+border: 2px solid pink; */
+
+
+.vertical-menu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: pink;
+    color: white;
+  }
+  
+  .vertical-menu a.active {
+    background-color: pink;
+    color: white;
+    border: 1.8px solid pink;
+    border-radius: 10px;
+  }
+
+  .shipping-details{
+      display: flex;
+      flex-direction: column;
+  }

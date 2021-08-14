@@ -22,7 +22,7 @@ constructor(private router: Router, @Inject(DOCUMENT) private _document,private 
     this.renderer.removeClass(this._document.body, 'bodybg-color');
   }
   navigatedashboard(){
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard/masters']);
 
 }
 }
