@@ -31,3 +31,26 @@ border: 2px solid pink; */
       display: flex;
       flex-direction: column;
   }
+.order-seller{
+  text-align: center;
+}
+.order-number{
+  text-align: end;
+}
+.shipping-card{
+  flex-direction: row;
+
+
+}
+agm-map {
+  height: 300px;
+}
+.shipping{
+  background-color: blue;
+  height: 150px;
+  border-radius: 15px;
+}
+.shipping-track{
+height: 70px;
+border-radius: 10px;
+}

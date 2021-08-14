@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class MastersComponent implements OnInit {
   showLastShipping: boolean = true;
   showArchive: boolean = false;
-
+  lat = 51.678418;
+  lng = 7.809007;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onChoseLocation(event){
+    console.log(event);
+  }
   showLastShippingStatus(){
     this.showLastShipping = true;
     this.showArchive = false;

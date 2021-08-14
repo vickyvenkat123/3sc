@@ -1,18 +1,18 @@
 <div fxLayoutAlign="space-around">
-<div  fxLayout="column" class="shipping-details">
+  <div fxLayout="column" class="shipping-details">
     <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="space-evenly center" class="vertical-menu">
-        <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
-        <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
+      <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
+      <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
     </div>
-    <div  fxLayout="column" class="shipping-details">
-      <div  *ngIf="showLastShipping" class="">
+    <div fxLayout="column" class="shipping-details">
+      <div *ngIf="showLastShipping" class="">
         <mat-card>Last Shiping</mat-card>
         <!-- <app-last-shipping
           [priorityData]="priorityData"
         >
         </app-last-shipping> -->
       </div>
-      <div  *ngIf="showArchive" class="">
+      <div *ngIf="showArchive" class="">
         <mat-card>Archive</mat-card>
         <!-- <app-archive
           [priorityData]="priorityData"
@@ -20,8 +20,72 @@
         </app-archive> -->
       </div>
     </div>
-</div>
-<div fxFlex="80">
+  </div>
+  <div fxFlex="70" flexLayout="column">
+    <div flexLayout="row">
+      <div fxFlex="20" fxLayoutAlign="start start">
+        <i class='fas fa-box'></i>
+        <span>Shipping info</span>
+      </div>
+      <div fxFlex="100" fxLayoutAlign="end start">
+        <i class='fas fa-pen'></i>
+        <span>Manage Shipping</span>
+      </div>
+    </div>
+    <div class="shipping-card" flexLayout="column">
+      <mat-card class="shipping">
+      <div flexLayout="row">
+     <div fxLayoutAlign="start start">
+      <!-- <div flexLayout="column">
+         <img src="/assets/images/watch.jfif" style="width: 60%; height: 40%;">
+        </div> -->
+        <h5>imageS</h5>
+     </div>
+     <div fxFlex="70"fxLayoutAlign="center center">
+      <h6>Seller</h6>
+    </div>
+    <div fxLayoutAlign="end start">
+      <h6>Number</h6>
+    </div>
+    <!-- <div flexLayout="column">
+      <div flexLayout="row" fxFlex="">
+        <img src="/assets/images/watch.jfif" style="width: 60%; height: 40%;">
+      </div> -->
+
+    </div>
+      </div>
+    </mat-card>
+    </div><br>
+    <div class="shipping-track" flexLayout="column">
+      <mat-card  class="shipping-track">mat mat-card</mat-card>
+    </div><br>
+    <div flexLayout="row">
+      <div fxFlex="20" fxLayoutAlign="start start">
+        <i class='fas fa-map'></i>
+        <span>Track on the map</span>
+      </div>
+      <div fxFlex="100" fxLayoutAlign="end start">
+         <span>Open full map</span>
+      </div>
+      <div flexLayout="column">
+        <agm-map [latitude]="latitude" [longitude]="longitude" (click)="onChoseLocation($event)">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+  <!-- <div fxflex="80" fxLayout="row" fxLayoutAlign="start start">
+    <li class="shipping">
+      <i class='fas fa-box'></i>
+      <span>Shipping info</span>
+    </li>
+    <div fxLayout="row" fxLayoutAlign="end start">
+      <li class="manage-shipping">
+        <i class='fas fa-pen'></i>
+        <span>Manage Shipping</span>
+      </li>
+      
+    </div>
     <mat-card>Simple card</mat-card>
-</div>
+  </div> -->
 </div>
