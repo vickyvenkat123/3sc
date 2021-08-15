@@ -1,60 +1,129 @@
 <div fxLayout="row" fxLayoutAlign="space-between">
   <div fxLayout="column" class="shipping-details">
-    <div
-      class="col-xs-12 col-md-12 col-lg-12"
-      fxLayout="row"
-      fxLayoutAlign="space-evenly center"
-      class="vertical-menu"
-    >
-      <a
-        class=""
-        [ngClass]="{ active: showLastShipping }"
-        (click)="showLastShippingStatus()"
-        >Last Shipping</a
-      >
-      <a
-        class=""
-        [ngClass]="{ active: showArchive }"
-        (click)="showArchiveStatus()"
-        >Archive</a
-      >
+    <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="space-evenly center" class="vertical-menu">
+      <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
+      <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
     </div>
     <div fxLayout="column">
       <div *ngIf="showLastShipping" class="shipping-details">
+        <div class="address-card">
+          <div fxLayout="column">
+            <div class="location">
+              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <div>
+                <h6>Location</h6>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxLayout="row">
+                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
+                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="showLastShipping" class="shipping-details">
         <mat-card class="address-card">
           <div fxLayout="column">
-            <div class="">20 5432 4932 3494</div>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div>
-                  <div class="address-country">New York</div>
-                  <div class="delivery-date">April 29</div>
-                </div>
-                <div>
-                  <div class="address-country">New York</div>
-                  <div class="delivery-date">April 29</div>
-                </div>
+            <div class="location">
+              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <div>
+                <h6>Location</h6>
               </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxLayout="row">
+                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
+                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
+              </div>
+
+            </div>
           </div>
         </mat-card>
-        <!-- <app-last-shipping
-          [priorityData]="priorityData"
-        >
-        </app-last-shipping> -->
+      </div>
+      <div *ngIf="showLastShipping" class="shipping-details">
+        <mat-card class="address-card">
+          <div fxLayout="column">
+            <div class="location">
+              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <div>
+                <h6>Location</h6>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxLayout="row">
+                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
+                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
+              </div>
+
+            </div>
+          </div>
+        </mat-card>
+      </div>
+      <div *ngIf="showLastShipping" class="shipping-details">
+        <mat-card class="address-card">
+          <div fxLayout="column">
+            <div class="location">
+              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <div>
+                <h6>Location</h6>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxLayout="row">
+                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
+                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
+              </div>
+
+            </div>
+          </div>
+        </mat-card>
+      </div>
+      <div *ngIf="showLastShipping" class="shipping-details">
+        <mat-card class="address-card">
+          <div fxLayout="column">
+            <div class="location">
+              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <div>
+                <h6>Location</h6>
+              </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center">
+              <div fxLayout="row">
+                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
+                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
+              </div>
+
+            </div>
+          </div>
+        </mat-card>
       </div>
       <div *ngIf="showArchive" class="shipping-details">
         <mat-card class="address-card">
           <div fxLayout="column">
             <div class="">20 5432 4932 2222</div>
-              <div fxLayout="row" fxLayoutAlign="space-between center">
-                <div>
-                  <div class="address-country">New York</div>
-                  <div class="delivery-date">April 29</div>
-                </div>
-                <div>
-                  <div class="address-country">Boston</div>
-                  <div class="delivery-date">April 29</div>
-                </div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+              <div>
+                <div class="address-country">New York</div>
+                <div class="delivery-date">April 29</div>
               </div>
+              <div>
+                <div class="address-country">Boston</div>
+                <div class="delivery-date">April 29</div>
+              </div>
+            </div>
           </div>
         </mat-card>
         <!-- <app-archive
@@ -85,43 +154,43 @@
           <div class="item-details">
             <div class="product-title" fxFlex="45">
               <span class="product-name">
-              Apple watch
+                Apple watch
               </span>
-            <span class="product-tag">
-              Blue Aluminum Case with Solo Loop
-            </span>
+              <span class="product-tag" style="color: silver;">
+                Blue Aluminum Case with Solo Loop
+              </span>
             </div>
             <div class="product-title" fxFlex="25">
-              <span class="product-name">
+              <span class="product-name" style="color: silver;">
                 Seller
               </span>
-            <span class="product-tag">
-              ROZETKA
-            </span>
+              <span class="product-tag">
+                ROZETKA
+              </span>
             </div>
             <div class="product-title" fxFlex="25">
-              <span class="product-name">
-              Order Number
+              <span class="product-name" style="color: silver;">
+                Order Number
               </span>
-            <span class="product-tag">
-             01234
-            </span>
+              <span class="product-tag">
+                01234
+              </span>
             </div>
             <div class="product-title" fxFlex="45">
               <span class="product-name">
-              Apple watch
+                INR
               </span>
-            <span class="product-tag">
-              Blue Aluminum Case with Solo Loop
-            </span>
+              <span class="product-tag" style="color: lightgreen;">
+                Free Delivery/Paid Delivery
+              </span>
             </div>
             <div class="product-title" fxFlex="40">
-              <span class="product-name">
-              Apple watch
+              <span class="product-name" style="color: silver;">
+                Delivery Address
               </span>
-            <span class="product-tag">
-              Blue Aluminum Case with Solo Loop
-            </span>
+              <span class="product-tag">
+                Blue Aluminum Case with Solo Loop
+              </span>
             </div>
           </div>
         </div>
@@ -129,7 +198,8 @@
     </div>
     <br />
     <div class="shipping-track" flexLayout="column">
-      <mat-card class="shipping-track">tracking</mat-card>
+      <mat-card class="shipping-track">
+      </mat-card>
     </div>
     <br />
     <div flexLayout="row">

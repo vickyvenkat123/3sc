@@ -12,7 +12,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './modules/material.module';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { MaterialModule } from './material.module';
     DashboardComponent,
     MastersComponent,
     HeaderComponent,
-    UploadDocsComponent,
+    UploadDocsComponent
   ],
   imports: [
     BrowserModule,

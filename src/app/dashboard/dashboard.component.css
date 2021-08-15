@@ -66,6 +66,7 @@
     position: absolute;
     padding: 10px;
     pointer-events: none;
+    border-radius: 15px;
   }
   
   /* align glyph */
@@ -74,7 +75,7 @@
   
   /* add padding  */
   .left-addon input  { padding-left:  30px; }
-  .right-addon input { padding-right: 30px; }
+  .right-addon input { padding-right: 30px; border-radius: 15px;}
 
   .search-actions{
     float:left;
