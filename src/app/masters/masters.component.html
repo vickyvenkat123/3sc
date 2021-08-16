@@ -126,10 +126,15 @@
       </mat-card>
     </div>
     <br />
-    <div class="shipping-track" flexLayout="column">
-      <mat-card class="shipping-track">
-      </mat-card>
+    <mat-card style="text-align: center;">
+    <div  flexLayout="row" class="shipping-track">
+      <span *ngFor="let item of counts;let i = index">
+          <span class="circle-desc" [class.circle-desc-active]="orderStatus == item">{{ item }}</span>
+          <span class="circles" [class.active]="orderStatus == item"></span>
+          <span class="bar" *ngIf="(i != counts.length-1)"></span>
+        </span>
     </div>
+  </mat-card>
     <br />
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
