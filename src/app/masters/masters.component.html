@@ -1,12 +1,12 @@
 <div fxLayout="row" fxLayoutAlign="space-between">
-  <div fxLayout="column" class="shipping-details">
-    <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="space-evenly center" class="vertical-menu">
+  <div fxFlex="25" fxLayout="column" class="shipping-details">
+    <div class="col-xs-12 col-md-12 col-lg-12" fxLayout="row" fxLayoutAlign="center" class="vertical-menu">
       <a class="" [ngClass]="{ active: showLastShipping }" (click)="showLastShippingStatus()">Last Shipping</a>
       <a class="" [ngClass]="{ active: showArchive }" (click)="showArchiveStatus()">Archive</a>
     </div>
     <div fxLayout="column">
       <div *ngIf="showLastShipping" class="shipping-details">
-        <div class="address-card">
+        <!-- <div class="address-card">
           <div fxLayout="column">
             <div class="location">
               <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
@@ -24,92 +24,21 @@
 
             </div>
           </div>
-        </div>
-      </div>
-      <div *ngIf="showLastShipping" class="shipping-details">
+        </div> -->
+
         <mat-card class="address-card">
           <div fxLayout="column">
-            <div class="location">
-              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
+            <div fxLayoutAlign="space-evenly center">
+              <img src="/assets/images/Location.png" class="location-logo">
             </div>
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <div>
-                <h6>Location</h6>
-              </div>
-            </div>
-            <div fxLayout="column" fxLayoutAlign="center center">
-              <div fxLayout="row">
-                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
-                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
-              </div>
-
+            <div fxLayout="row" fxLayoutAlign="space-evenly center">
+                <button type="button"  class="btn btn-primary action-btn">Download</button>
+                <button type="button"  class="btn btn-primary action-btn">Upload</button>
             </div>
           </div>
         </mat-card>
       </div>
-      <div *ngIf="showLastShipping" class="shipping-details">
-        <mat-card class="address-card">
-          <div fxLayout="column">
-            <div class="location">
-              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
-            </div>
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <div>
-                <h6>Location</h6>
-              </div>
-            </div>
-            <div fxLayout="column" fxLayoutAlign="center center">
-              <div fxLayout="row">
-                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
-                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
-              </div>
-
-            </div>
-          </div>
-        </mat-card>
-      </div>
-      <div *ngIf="showLastShipping" class="shipping-details">
-        <mat-card class="address-card">
-          <div fxLayout="column">
-            <div class="location">
-              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
-            </div>
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <div>
-                <h6>Location</h6>
-              </div>
-            </div>
-            <div fxLayout="column" fxLayoutAlign="center center">
-              <div fxLayout="row">
-                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
-                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
-              </div>
-
-            </div>
-          </div>
-        </mat-card>
-      </div>
-      <div *ngIf="showLastShipping" class="shipping-details">
-        <mat-card class="address-card">
-          <div fxLayout="column">
-            <div class="location">
-              <img src="/assets/images/Location.png" style="width: 10%; height: 10%;">
-            </div>
-            <div fxLayout="row" fxLayoutAlign="center center">
-              <div>
-                <h6>Location</h6>
-              </div>
-            </div>
-            <div fxLayout="column" fxLayoutAlign="center center">
-              <div fxLayout="row">
-                <button type="button" style='margin-right:10px' class="btn btn-primary">Download</button>
-                <button type="button" style='margin-left:10px' class="btn btn-primary">Upload</button>
-              </div>
-
-            </div>
-          </div>
-        </mat-card>
-      </div>
+  
       <div *ngIf="showArchive" class="shipping-details">
         <mat-card class="address-card">
           <div fxLayout="column">
@@ -135,12 +64,12 @@
   </div>
 
   <div fxFlex="70" flexLayout="column">
-    <div flexLayout="row">
-      <div fxFlex="20" fxLayoutAlign="start start">
+    <div flexLayout="row" fxLayoutAlign="space-between center" style="padding-bottom: 10px;">
+      <div fxFlex="20" fxLayoutGap="5px" fxLayoutAlign="start center">
         <i class="fas fa-box"></i>
-        <span>Shipping info</span>
+        <span style="color: #494f53;font-weight: 600;">Shipping info</span>
       </div>
-      <div class="manage-shipping" fxFlex="100" fxLayoutAlign="end start">
+      <div class="manage-shipping" fxLayoutGap="5px"  fxLayoutAlign="end center">
         <i class="fas fa-pen"></i>
         <span>Manage Shipping</span>
       </div>

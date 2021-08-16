@@ -45,18 +45,17 @@
   background-color: #f4f5fe;
 } */
 .active-link{
-  background-color: #373d41;
-  display: flex;
-    justify-content: space-around;
+  background-color: #c4c8ca;
     margin-right: 15px;
     border-radius: 15px;
-    color: #b6babc;
-    padding:4px;
+    color: #ccd0d6;
 }
 .active-text{
   color: #fff;
 }
-
+.navbar-nav>li>a {
+  line-height: 25px;
+}
   .inner-addon {
     position: relative;
   }

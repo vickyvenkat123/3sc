@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "fba"
+  "defaultProject": "fba",
+  "cli": {
+    "analytics": false
+  }
 }
