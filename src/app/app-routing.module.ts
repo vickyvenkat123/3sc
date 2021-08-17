@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { LoginGuard } from './login.guard';
 import { LoginComponent } from './login/login.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { UploadDocsModule } from './upload-docs/upload-docs.module';
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
+  { path: "login", 
+  component: LoginComponent,
+  canActivate : [LoginGuard]
+ },
   { path: "", redirectTo: "login", pathMatch: "full"},
   {path: "home", component:HomeComponent},
   {path: "dashboard", component:DashboardComponent,

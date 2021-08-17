@@ -13,6 +13,7 @@ import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { MaterialModule } from './modules/material.module';
+import { LoginGuard } from './login.guard';
 
 
 
@@ -36,7 +37,7 @@ import { MaterialModule } from './modules/material.module';
     FlexLayoutModule,
     
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
