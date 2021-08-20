@@ -1,11 +1,11 @@
-.card-header {
+mat-card {
     padding: 20px;
     margin-bottom: 0;
     background-color: white;
-    border-bottom: 1px solid #e3e6f0;
-    width: 40%;
-    border-radius: 10px;
+    border-bottom: 1px solid #cad5f8;
+    width: 50%;
+    border-radius: 8px;
 }
-a:hover{
-    background-color: yellow;
+upload-doc{
+    height: 400px;
 }

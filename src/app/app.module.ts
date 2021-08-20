@@ -13,7 +13,8 @@ import { MastersComponent } from './masters/masters.component';
 import { HeaderComponent } from './header/header.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { MaterialModule } from './modules/material.module';
-import { LoginGuard } from './login.guard';
+import { ShowDocsComponent } from './show-docs/show-docs.component';
+import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.component';
 
 
 
@@ -25,7 +26,9 @@ import { LoginGuard } from './login.guard';
     DashboardComponent,
     MastersComponent,
     HeaderComponent,
-    UploadDocsComponent
+    UploadDocsComponent,
+    ShowDocsComponent,
+    LrGenerateComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { LoginGuard } from './login.guard';
     FlexLayoutModule,
     
   ],
-  providers: [LoginGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

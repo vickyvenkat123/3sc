@@ -12,7 +12,7 @@ export class MastersComponent implements OnInit {
  //Demo purpose only, Data might come from Api calls/service
   public counts = ["Sent by the seller","Delivering","Warehouse",
   "Post office","Received"];
-  public orderStatus = "Delivering"
+  public orderStatus = "Warehouse"
 
   constructor() { }
 
