@@ -1,59 +1,7 @@
 <div fxLayout="row">
-  <div fxLayout="column" style="width: 20%">
-    <app-header></app-header>
-  
-      <ul class="navbar-nav sidebar sidebar-dark accordion">
-        <li class="nav-item" [ngClass]="{'active-link': step==='step1'}" (click)="step='step1'">
-        <a class="nav-link">
-          <i class="fas fa-box"></i>
-          <span class="ml10">My shippings</span>
-            </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step2'}" (click)="step='step2'">
-          <a class="nav-link" routerLink="/dashboard/masters">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Masters</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step3'}" (click)="step='step3'">
-          <a  class="nav-link" routerLink="/dashboard/upload-docs">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Upload Documents</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step4'}" (click)="step='step4'">
-          <a  class="nav-link" routerLink="/dashboard/show-docs">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Show Documents</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step5'}" (click)="step='step5'">
-          <a class="nav-link" routerLink="/dashboard/lr-generate">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">LR Generate</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step6'}" (click)="step='step6'">
-          <a class="nav-link" routerLink="/dashboard/audit-reports">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Audit Reports</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step7'}" (click)="step='step7'">
-          <a class="nav-link" routerLink="/dashboard/exce-res">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Exception Resolution</span>
-          </a>
-        </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step8'}" (click)="step='step8'">
-          <a class="nav-link" routerLink="/dashboard/alert-notification">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span class="ml10">Alert & Notifications</span>
-          </a>
-        </li>
-      </ul>
-
-  </div>
+  <div style="width: 20%;">
+  <app-side-nav></app-side-nav>
+</div>
   <div class="container-fluid page-content">
     <div class="row"  style="margin: 0;" fxLayoutAlign="start">
       <div fxFlex="25" style="padding-left: 0" class="form-group col-xs-3">

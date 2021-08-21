@@ -15,6 +15,7 @@ import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { MaterialModule } from './modules/material.module';
 import { ShowDocsComponent } from './show-docs/show-docs.component';
 import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 
@@ -28,7 +29,8 @@ import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.compo
     HeaderComponent,
     UploadDocsComponent,
     ShowDocsComponent,
-    LrGenerateComponent
+    LrGenerateComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

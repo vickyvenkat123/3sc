@@ -1,29 +1,6 @@
 
 
-.sidebar {
-  min-height: 70vh;
-    height: -webkit-fill-available;
-    text-align: left;
-    left: 0;
-    bottom: 0;
-}
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 16px;
-  margin-bottom: 0;
-  background-color: #fff;
-}
 
-.sidebar .nav-item .nav-link {
-  padding: 0.75rem 1rem;
-  color: black;
-}
-.sidebar .nav-item .nav-link,
-.topbar .nav-item .nav-link {
-  position: relative;
-  color: rgba(3, 3, 3, 0.993);
-}
 .nav-shipping {
   text-align: center;
   text-transform: none;

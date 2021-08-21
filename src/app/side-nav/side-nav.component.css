@@ -1,0 +1,85 @@
+.sidebar {
+    min-height: 70vh;
+      height: -webkit-fill-available;
+      text-align: left;
+      left: 0;
+      bottom: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  
+  .sidebar .nav-item .nav-link {
+    padding: 0.75rem 1rem;
+    color: black;
+  }
+  .sidebar .nav-item .nav-link,
+  .topbar .nav-item .nav-link {
+    position: relative;
+    color: rgba(3, 3, 3, 0.993);
+  }
+  .nav-shipping {
+    text-align: center;
+    text-transform: none;
+    border-radius: 7px;
+    width: fit-content;
+    background: black;
+    color: white;
+    
+  }
+  
+  .items,sidebar,a{
+      text-decoration: none;
+  }
+  .page-content{
+    background-color: #f4f5fe;
+    padding-top: 20px;
+  }
+  /* .page-panel{
+    background-color: #f4f5fe;
+  } */
+  .active-link{
+    background-color: #c4c8ca;
+      margin-right: 15px;
+      border-radius: 15px;
+      color: #ccd0d6;
+  }
+  .active-text{
+    color: #fff;
+  }
+  .navbar-nav>li>a {
+    line-height: 25px;
+  }
+    .inner-addon {
+      position: relative;
+    }
+    
+    /* style glyph */
+    .inner-addon .glyphicon {
+      position: absolute;
+      padding: 10px;
+      pointer-events: none;
+      border-radius: 15px;
+    }
+    
+    /* align glyph */
+    .left-addon .glyphicon  { left:  0px;}
+    .right-addon .glyphicon { right: 0px;}
+    
+    /* add padding  */
+    .left-addon input  { padding-left:  30px; }
+    .right-addon input { padding-right: 30px; border-radius: 15px;}
+  
+    .search-actions{
+      float:left;
+      padding-left:10px;
+    }
+    .logout-actions{
+      float:right;
+      padding-right:10px;
+    }
+  
