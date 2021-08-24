@@ -1,0 +1,23 @@
+<div  class="col-xs-12 col-md-12 col-lg-12">
+    <div>
+        <mat-form-field appearance="outline" >
+            <mat-select (selectionChange)="filterChanged($event.value)">
+              <mat-option  *ngFor="let doc of filterDocTypes" [value]="doc.value">
+                {{ doc.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+<mat-card>
+    <div align="start">
+        <table>
+            <tbody><tr>
+                <td>{{docTitle}}:</td>
+                <td><input id="_uploadinvoice" class="form-control" type="file" accept="application/pdf"></td>
+                <td><button style="margin-left: 10px;"class="btn btn-primary" (click)="myFunction()">Submit</button></td>
+            </tr>
+        </tbody></table>
+
+    </div>
+</mat-card>
+</div>
