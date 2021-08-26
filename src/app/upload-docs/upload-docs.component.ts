@@ -13,7 +13,7 @@ export class UploadDocsComponent implements OnInit {
     { value: 'uploadPOD', viewValue: 'Upload POD' },
     { value: 'uploadContract', viewValue: 'Upload Contract' }
   ];
-  docTitle: string = "Upload Invoice File";
+  docTitle: string = "Upload Documents";
   constructor() {}
 
   ngOnInit(): void {}

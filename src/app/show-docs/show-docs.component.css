@@ -25,4 +25,8 @@
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-right:1px solid ;
+    font-style: bold;
+}
+th.mat-header{
+  font-style: bold;
 }

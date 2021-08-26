@@ -1,13 +1,7 @@
-
-
-
-/* border-radius: 10px;
-background: white;
-color: pink;
-padding: 5px;
-border: 2px solid pink; */
-
-
+h6{
+  text-align: center;
+  font-size: inherit;
+}
 .vertical-menu a {
     display: block;
     padding: 5px 25px 5px 25px;
@@ -30,9 +24,9 @@ border: 2px solid pink; */
     padding: 5px 25px 5px 25px;
   }
 .address-card{
-  border-radius: 15px;
+  border-radius: 5px;
 background-color:#fff ;
-
+margin-top: 5px;
 }
 .action-btn{
   background-color: #2b6390 !important;
@@ -40,7 +34,7 @@ background-color:#fff ;
 }
 .location-logo{
   height: 30px;
-    width: 20px;
+    width: 30px;
     margin-left: 12px;
 }
   .shipping-details{

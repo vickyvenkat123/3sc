@@ -9,3 +9,9 @@ mat-card {
 upload-doc{
     height: 400px;
 }
+.btn{
+  margin-top: 20px;
+}
+input{
+    margin-top: 15px;
+}

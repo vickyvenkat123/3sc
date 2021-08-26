@@ -1,8 +1,8 @@
 [
     {"position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
-    {"position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
-    {"position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
-    {"position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
-    {"position": 1, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"}
+    {"position": 2, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
+    {"position": 3, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
+    {"position": 4, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"},
+    {"position": 5, "name": "Hydrogen", "weight": 1.0079, "symbol": "H"}
     
   ]
