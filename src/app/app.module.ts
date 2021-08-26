@@ -16,6 +16,7 @@ import { MaterialModule } from './modules/material.module';
 import { ShowDocsComponent } from './show-docs/show-docs.component';
 import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -40,7 +41,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     FormsModule,
     MaterialModule,
     FlexLayoutModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

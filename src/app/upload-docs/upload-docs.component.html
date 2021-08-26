@@ -1,6 +1,7 @@
 <div  class="col-xs-12 col-md-12 col-lg-12">
     <div>
-        <mat-form-field appearance="outline" >
+        <mat-form-field appearance="outline" placeholder="Choose Documents">
+            <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Choose Documents" #input> -->
             <mat-select (selectionChange)="filterChanged($event.value)">
               <mat-option  *ngFor="let doc of filterDocTypes" [value]="doc.value">
                 {{ doc.viewValue }}

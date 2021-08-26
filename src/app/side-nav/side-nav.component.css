@@ -1,5 +1,5 @@
 .sidebar {
-    min-height: 70vh;
+    min-height: 88vh;
       height: -webkit-fill-available;
       text-align: left;
       left: 0;
@@ -8,7 +8,7 @@
   .navbar-nav {
     display: flex;
     flex-direction: column;
-    padding-left: 16px;
+    padding-left: 10px;
     margin-bottom: 0;
     background-color: #fff;
   }
