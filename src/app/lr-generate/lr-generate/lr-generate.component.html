@@ -6,17 +6,177 @@
             </div>
         </div>
     </div>
-</div>
-<div class="card-body">
-    <div class="box-body">
-        <div class="row pt-3">
-            <div class="col-lg-2">
-                <label class="control-label">Invoice No*</label>
+    <div class="card-body">
+        <div class="box-body">
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Invoice No*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" id="InvoiceNo" maxlength="50" name="InvoiceNo"
+                        placeholder="Invoice No" type="text" value="" />
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-lg-2">
+                    <label class="control-label">Vendor Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" id="VendorName" name="VendorName">
+                        <option value="">Select</option>
+                        <option value="DARCL">DARCL</option>
+                        <option value="Express">Express</option>
+                        <option value="JMT">JMT</option>
+                        <option value="Vtrans">Vtrans</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">LR No*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" id="LRNo" maxlength="50" name="LRNo" placeholder="LR No" type="text"
+                        value="" />
+                </div>
             </div>
-            <div class="col-lg-4">
-                <input Type="number" class="form-control" id="InvoiceNo" maxlength="50" name="InvoiceNo"
-                    placeholder="Invoice No" type="text" value="" />
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Consignor Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" id="ConsignorName" name="ConsignorName">
+                        <option value="">Select</option>
+                        <option value="WESTERN DRUGS LTD">WESTERN DRUGS LTD</option>
+                        <option value="JUBILIANT LIFE SCIENCES">JUBILIANT LIFE SCIENCES</option>
+                        <option value="NATRIZEN CHEMICALS">NATRIZEN CHEMICALS</option>
+                        <option value="JUBILIANT INTEGREVA LIMITED">JUBILIANT INTEGREVA LIMITED</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">Consignee Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" id="ConsigneeName" name="ConsigneeName">
+                        <option value="">Select</option>
+                        <option value="Jubiliant">Jubiliant</option>
+                        <option value="ACETOCHEM AGENCIES">ACETOCHEM AGENCIES</option>
+                        <option value="JUBILIANT INTEGREVA LIMITED">JUBILIANT INTEGREVA LIMITED</option>
+                        <option value="Aurobindo Pharma">Aurobindo Pharma</option>
+                        <option value="Aarti In D unit">Aarti In D unit</option>
+                        <option value="Sun Pharmaceuticals">Sun Pharmaceuticals</option>
+                        <option value="AGROCOOL INDIA LTD">AGROCOOL INDIA LTD</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">From Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" id="FromName" name="FromName">
+                        <option value="">Select</option>
+                        <option value="UDAIPUR">UDAIPUR</option>
+                        <option value="GAJRAULA">GAJRAULA</option>
+                        <option value="HYDERABAD">HYDERABAD</option>
+                        <option value="NIRA">NIRA</option>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">To Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" id="ToName" name="ToName">
+                        <option value="">Select</option>
+                        <option value="NAVA SHEVA">NAVA SHEVA</option>
+                        <option value="VADORA">VADORA</option>
+                        <option value="BHARUCH">BHARUCH</option>
+                        <option value="ROHTAK">ROHTAK</option>
+                        <option value="SIRKAKULAM">SIRKAKULAM</option>
+                        <option value="TARAPUR">TARAPUR</option>
+                        <option value="Ahmednagar">Ahmednagar</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Vehicle No*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" id="VehicleNo" maxlength="50" name="VehicleNo" placeholder="Vehicle No"
+                        type="text" value="" />
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">Vehicle Type*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" id="VehicleType" maxlength="50" name="VehicleType"
+                        placeholder="Vehicle Type" type="text" value="" />
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Product Name*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" id="ProdoctName" maxlength="50" name="ProdoctName"
+                        placeholder="Product Name" type="text" value="" />
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">Loading Quantity*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" data-val="true"
+                        data-val-number="The field Quantity must be a number."
+                        data-val-required="The Quantity field is required." id="Quantity" maxlength="50" name="Quantity"
+                        placeholder="Loading Quantity" type="text" value="" />
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Gross Weight*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" data-val="true"
+                        data-val-number="The field GrossWeight must be a number."
+                        data-val-required="The GrossWeight field is required." id="GrossWeight" maxlength="50"
+                        name="GrossWeight" placeholder="Gross Weight" type="text" value="" />
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">Loading Weight*</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" data-val="true"
+                        data-val-number="The field LoadingWeight must be a number."
+                        data-val-required="The LoadingWeight field is required." id="LoadingWeight" maxlength="50"
+                        name="LoadingWeight" placeholder="Loading Weight" type="text" value="" />
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Unloading Qty</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" id="UnloadingQty" maxlength="50" name="UnloadingQty"
+                        placeholder="Unloading Qty" type="text" value="" />
+                </div>
+                <div class="col-lg-2">
+                    <label class="control-label">Unloading Weight</label>
+                </div>
+                <div class="col-lg-4">
+                    <input Type="number" class="form-control" id="UnloadWeight" maxlength="50" name="UnloadWeight"
+                        placeholder="Unload Weight" type="text" value="" />
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-lg-2">
+                    <label class="control-label">Feedback</label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="form-control" id="Feedback" maxlength="50" name="Feedback" placeholder="Feedback"
+                        type="text" value="" />
+                </div>
+                <div class="col-lg-6 text-right">
+                    <button type="button" class="btn btn-primary action-btn">LR Generate</button>
+                </div>
             </div>
         </div>
     </div>
-</div>

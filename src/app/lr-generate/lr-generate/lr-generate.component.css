@@ -1,4 +1,45 @@
 .card-body {
     flex: 1 1 auto;
     padding: 0.75rem;
+    background-color: #FFFFFF !important;
+    padding: .75rem 1.25rem;
+    margin-left: -15px;
+}
+.box-body{
+height: max-content;
+font-size: 16px;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(3.5rem + 2px);
+}
+label{
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-size: 15px;
+    font-family: arial,sans-serif;
+    font-weight: 150;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color:#008000;
+    border-color:#008000;
+}
+.btn{
+    width: 25%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px; 
+}
+.form-control{
+    font-size: medium;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card{
+    margin-left: -15px;
+    text-align: center;
 }
