@@ -17,6 +17,7 @@ import { ShowDocsComponent } from './show-docs/show-docs.component';
 import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuditReportsComponent } from './audit-reports/audit-reports/audit-reports.component';
 
 
 
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     UploadDocsComponent,
     ShowDocsComponent,
     LrGenerateComponent,
-    SideNavComponent
+    SideNavComponent,
+    AuditReportsComponent
   ],
   imports: [
     BrowserModule,

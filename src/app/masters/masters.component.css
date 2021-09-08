@@ -28,9 +28,11 @@ h6{
 background-color:#fff ;
 margin-top: 5px;
 }
-.action-btn{
-  background-color: #2b6390 !important;
-  font-size: 12px;
+.action-btn {
+  font-size: 13px;
+}
+.action-btn a:hover{
+  background-color: green;
 }
 .location-logo{
   height: 30px;
@@ -192,6 +194,7 @@ color: #ffa500;
      font-size:120%
   }
 }
+
 
 
 

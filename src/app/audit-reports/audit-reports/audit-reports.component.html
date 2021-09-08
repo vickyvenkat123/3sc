@@ -1,1 +1,120 @@
-<p>audit-reports works!</p>
+<!-- <div class="container-fluid">
+    <div class="col-xl-12 col-lg-12">
+        <mat-card>simple card</mat-card>
+    </div>
+</div> -->
+<div class="col-xl-12 col-lg-12">
+  <mat-card>
+    <div class="row pt-3 ">
+      <div class="col-lg-2">
+        <label class="control-label">Invoice No</label>
+      </div>
+      <div class="col-lg-4">
+        <input Type="number" class="form-control" id="InvoiceNo" maxlength="50" name="InvoiceNo" type="text" value="" />
+      </div>
+      <div class="col-lg-2">
+        <label class="control-label">Carrier</label>
+      </div>
+      <div class="col-lg-4">
+        <input Type="number" class="form-control" id="InvoiceNo" maxlength="50" name="InvoiceNo" type="text" value="" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="control-label text-left col-lg-2">Invoice Date From</label>
+      <div class="col-lg-4">
+        <input type="date" class="form-control" id="fromdate" onchange="javascript:dataFilterOnDate()" />
+      </div>
+      <label class="control-label text-left col-lg-2">Invoice Date To</label>
+      <div class="col-lg-4">
+        <input type="date" class="form-control" id="todate" onchange="javascript:dataFilterOnDate()" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="control-label text-left col-lg-2">Deviation</label>
+      <div class="col-lg-4">
+
+        <input Type="number" class="form-control" id="InvoiceNo" maxlength="50" name="InvoiceNo" type="text" value="" />
+      </div>
+    </div>
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search Documents" #input>
+      </mat-form-field>
+
+      <div class="mat-elevation-z8 table">
+        <table mat-table [dataSource]="dataDocsSource" matSort>
+
+          <!-- # Column -->
+          <ng-container matColumnDef="#">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+            <td mat-cell *matCellDef="let row"> {{row.position}} </td>
+          </ng-container>
+
+          <!-- Invoice No Column -->
+          <ng-container matColumnDef="Invoice No">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoice No </th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+          </ng-container>
+
+          <!-- Invoice Date Column -->
+          <ng-container matColumnDef="Invoice Date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Invoice Date </th>
+            <td mat-cell *matCellDef="let row"> {{row.weight}} </td>
+          </ng-container>
+
+          <!-- Carrier Column -->
+          <ng-container matColumnDef="Carrier">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Carrier </th>
+            <td mat-cell *matCellDef="let row"> {{row.symbol}} </td>
+          </ng-container>
+
+          <!-- Invoice Amount column -->
+          <ng-container matColumnDef="Invoice Amount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoice Amount</th>
+            <td mat-cell *matCellDef="let row"> {{row.Amount}} </td>
+          </ng-container>
+
+          <!-- Deviation  column -->
+          <ng-container matColumnDef="Deviation">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Deviation</th>
+            <td mat-cell *matCellDef="let row"> {{row.Deviation}} </td>
+          </ng-container>
+
+          <!-- Deviation Amount column -->
+          <ng-container matColumnDef="Deviation Amount">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Deviation Amount</th>
+            <td mat-cell *matCellDef="let row"> {{row.DAmount}} </td>
+          </ng-container>
+
+          <!-- Remarks column -->
+          <ng-container matColumnDef="Remarks">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Remarks</th>
+            <td mat-cell *matCellDef="let row"> {{row.Remarks}} 
+              <input type="text" class="form-control audittxt" id="_txt1">
+            </td>
+            
+          </ng-container>
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Action</th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-raised-button color="primary" (click)="getRecord(element.name)">Send to finance</button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+
+    </div>
+  </mat-card>
+</div>

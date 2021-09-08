@@ -4,6 +4,7 @@
     background-color: #FFFFFF !important;
     padding: .75rem 1.25rem;
     margin-left: -15px;
+    border:1px solid black;
 }
 .box-body{
 height: max-content;
@@ -38,6 +39,7 @@ label{
     margin-bottom: 0;
     background-color: rgba(0,0,0,.03);
     border-bottom: 1px solid rgba(0,0,0,.125);
+    border: 1px solid black;
 }
 .card{
     margin-left: -15px;
