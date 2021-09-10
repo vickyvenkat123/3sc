@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-  step:any = "step1";
+  step:any = "step2";
   constructor() { }
 
   ngOnInit(): void {

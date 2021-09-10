@@ -1,6 +1,6 @@
 h6{
   text-align: center;
-  font-size: inherit;
+  font-size: 14px ;
 }
 .vertical-menu a {
     display: block;
@@ -29,14 +29,14 @@ background-color:#fff ;
 margin-top: 5px;
 }
 .action-btn {
-  font-size: 13px;
+  font-size: revert-smaller;
 }
 .action-btn a:hover{
   background-color: green;
 }
 .location-logo{
   height: 30px;
-    width: 30px;
+    width: 25px;
     margin-left: 12px;
 }
   .shipping-details{

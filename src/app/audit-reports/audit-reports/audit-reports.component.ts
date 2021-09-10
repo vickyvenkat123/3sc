@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 import {MatPaginator} from '@angular/material/paginator';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import {MatSort} from '@angular/material/sort';
 import { AuditService } from 'src/app/services/audit.service';
 export interface PeriodicElement {
@@ -23,6 +25,7 @@ export class AuditReportsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   data: any;
   dataDocsSource: any;
+  isLoadingResults= true;
   constructor( public audit : AuditService) { }
 
   ngOnInit(): void {
@@ -31,6 +34,7 @@ this.auditData();
   auditData() {
     this.audit.getAuditData().subscribe(res=>{
       this.dataDocsSource = res;
+      this.isLoadingResults=false;
     })
   }
  

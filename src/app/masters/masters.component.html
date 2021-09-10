@@ -33,8 +33,12 @@
             </div>
             <h6>Location</h6>
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                <button type="button"  class="btn btn-outline-primary action-btn">Download</button>
-                <button type="button"  class="btn btn-outline-primary action-btn">Upload</button>
+
+              <button type="button" (click)="downloadFile()"
+                class="btn btn-outline-primary action-btn">Download</button>
+              <button type="button" (click)="uploadFile.click()" class="btn btn-outline-primary">Upload</button>
+              <input #uploadFile (change)="upload($event)" type='file' style="display:none" />
+
             </div>
           </div>
         </mat-card>
@@ -45,8 +49,9 @@
             </div>
             <h6>Item Master</h6>
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                <button type="button"  class="btn btn-outline-primary action-btn">Download</button>
-                <button type="button"  class="btn btn-outline-primary action-btn">Upload</button>
+              <button type="button" (click)="downloadFile()" class="btn btn-outline-primary action-btn">Download</button>
+              <button type="button" (click)="uploadFile.click()" class="btn btn-outline-primary">Upload</button>
+              <input #uploadFile (change)="upload($event)" type='file' style="display:none" />
             </div>
           </div>
         </mat-card>
@@ -57,8 +62,10 @@
             </div>
             <h6>Contract Master</h6>
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                <button type="button"  class="btn btn-outline-primary action-btn">Download</button>
-                <button type="button"  class="btn btn-outline-primary action-btn">Upload</button>
+              <button type="button" (click)="downloadFile()"
+                class="btn btn-outline-primary action-btn">Download</button>
+                <button type="button" (click)="uploadFile.click()" class="btn btn-outline-primary">Upload</button>
+                <input #uploadFile (change)="upload($event)" type='file' style="display:none" />  
             </div>
           </div>
         </mat-card>
@@ -69,8 +76,10 @@
             </div>
             <h6>Vehicle Master</h6>
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                <button type="button"  class="btn btn-outline-primary action-btn">Download</button>
-                <button type="button"  class="btn btn-outline-primary action-btn">Upload</button>
+              <button type="button" (click)="downloadFile()"
+                class="btn btn-outline-primary action-btn">Download</button>
+              <button type="button" (click)="uploadFile.click()" class="btn btn-outline-primary">Upload</button>
+              <input #uploadFile (change)="upload($event)" type='file' style="display:none" />
             </div>
           </div>
         </mat-card>
@@ -81,13 +90,15 @@
             </div>
             <h6>Currency Conversion Master</h6>
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                <button type="button"  class="btn btn-outline-primary action-btn">Download</button>
-                <button type="button"  class="btn btn-outline-primary action-btn">Upload</button>
+              <button type="button" (click)="downloadFile()"
+                class="btn btn-outline-primary action-btn">Download</button>
+                <button type="button" (click)="uploadFile.click()" class="btn btn-outline-primary">Upload</button>
+                <input #uploadFile (change)="upload($event)" type='file' style="display:none" />  
             </div>
           </div>
         </mat-card>
       </div>
-  
+
       <div *ngIf="showArchive" class="shipping-details">
         <mat-card class="address-card">
           <div fxLayout="column">
@@ -118,7 +129,7 @@
         <i class="fas fa-box"></i>
         <span style="color: #494f53;font-weight: 600;">Shipping info</span>
       </div>
-      <div class="manage-shipping" fxLayoutGap="5px"  fxLayoutAlign="end center">
+      <div class="manage-shipping" fxLayoutGap="5px" fxLayoutAlign="end center">
         <i class="fas fa-pen"></i>
         <span>Manage Shipping</span>
       </div>
@@ -176,14 +187,14 @@
     </div>
     <br />
     <mat-card style="text-align: center;">
-    <div  flexLayout="row" class="shipping-track">
-      <span *ngFor="let item of counts;let i = index">
+      <div flexLayout="row" class="shipping-track">
+        <span *ngFor="let item of counts;let i = index">
           <span class="circle-desc" [class.circle-desc-active]="orderStatus == item">{{ item }}</span>
           <span class="circles" [class.active]="orderStatus == item"></span>
           <span class="bar" *ngIf="(i != counts.length-1)"></span>
         </span>
-    </div>
-  </mat-card>
+      </div>
+    </mat-card>
     <br />
     <div flexLayout="row">
       <div fxFlex="20" fxLayoutAlign="start start">
