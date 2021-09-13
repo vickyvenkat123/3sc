@@ -1,6 +1,6 @@
 
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, Input, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  name ="Devansh Verma"
   constructor(private router: Router, @Inject(DOCUMENT) private _document,private renderer: Renderer2 ) {}
   ngOnInit(): void {
     //this._document.body.classList.add('bodybg-color');

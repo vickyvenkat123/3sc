@@ -18,9 +18,7 @@ export class MastersComponent implements OnInit {
   "Post office","Received"];
   public orderStatus = "Warehouse"
   data: Blob;
- 
-  
-    version = VERSION;
+  version = VERSION;
     base64File: string = null;
     filename: string = null;
   currentFileUpload: any;
@@ -37,9 +35,7 @@ export class MastersComponent implements OnInit {
   constructor(private masters : MastersService) { }
 
   ngOnInit(): void {
-   
-    
-  }
+    }
   selectFile(event: any) {
     this.selectedFiles = event.target.files;
 }
@@ -60,7 +56,6 @@ export class MastersComponent implements OnInit {
   loadDocumentInfo() {
     throw new Error('Method not implemented.');
   }
-  
   showLastShippingStatus(){
     this.showLastShipping = true;
     this.showArchive = false;
@@ -69,17 +64,7 @@ export class MastersComponent implements OnInit {
     this.showLastShipping = false;
     this.showArchive = true;
   }
-  // deliveryStatus(shippingType){
-  //   switch (shippingType) {
-  //     case 'lastShipping':
-  //     this.showLastShipping = true;
-  //     default:
-  //     this.showArchive = true;
-  //   }
-  // }
-
-  downloadFile() {
-    
+downloadFile() {
     this.masters.getMastersData().subscribe(response => {
 			let blob:any = new Blob([response], { type: 'text/json; charset=utf-8' });
 			const url = window.URL.createObjectURL(blob);

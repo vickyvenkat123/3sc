@@ -5,13 +5,18 @@ mat-card {
     border-bottom: 1px solid #cad5f8;
     width: 50%;
     border-radius: 8px;
+    height: 20rem;
 }
 upload-doc{
     height: 400px;
 }
 .btn{
-  margin-top: 20px;
+    cursor: pointer;
+    height: 27px;
+    margin-top: 6.2rem;
 }
+
 input{
-    margin-top: 15px;
+    margin-top: 6rem;
+    
 }

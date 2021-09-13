@@ -67,3 +67,7 @@ mat-form-field{
   .form-control{
     font-size: 1.3rem;
   }
+.dropdown-show{
+  margin-left: 61rem;
+  color: black;
+}
