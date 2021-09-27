@@ -1,39 +1,37 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
 import { DataService } from '../services/data.service';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+
 @Component({
   selector: 'app-show-docs',
   templateUrl: './show-docs.component.html',
   styleUrls: ['./show-docs.component.css']
 })
 export class ShowDocsComponent implements OnInit {
-  displayedColumns: string[] = ['#', 'Invoice No', 'Invoice Date', 'Supplier Name', 'View File'];
- 
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-
-  public filterDocTypes = [
-    { value: 'Show Invoice', viewValue: 'Show Invoice' },
-    { value: 'Show LR', viewValue: 'Show LR' },
-    { value: 'Show POD', viewValue: 'Show POD' },
-  ];
-  docTitle: string = "Upload Invoice File";
+  
+  fileURL: any;
   dataDocsSource: any;
    constructor( public data : DataService) {}
-
    ngOnInit(){
      this.getData();
+     
    }
+   openfile() {
+    this.data.getTableDataView().subscribe((_response: any) => {
+			let blob:any = new Blob([ _response], { type: 'text/json; charset=utf-8' });
+			const url = window.URL.createObjectURL(blob);
+			//  fileSaver.saveAs(blob, 'pdf');
+     window.open(url);
+    //  window.print();
+    //  let a         = document.createElement('a');
+    //       a.href        = this.fileURL; 
+    //       a.target      = '_blank';
+    //       a.download    = 'bill.pdf';
+    //       document.body.appendChild(a);
+    //       a.click();
+		}), _error => console.log('Error downloading the file'),
+                 () => console.info('File downloaded successfully');
+  }
    
    getData(){
      this.data.getTableData().subscribe(res=>{
@@ -41,19 +39,19 @@ export class ShowDocsComponent implements OnInit {
      })
    }
 
-  filterChanged(selectedValue: any) {
+  // filterChanged(selectedValue: any) {
 
-    switch(selectedValue){
-     case selectedValue = "ShowInvoice":
-     this.docTitle = 'Show Invoice';
-     break;
-   case selectedValue = "ShowLR":
-     this.docTitle = 'Show LR';
-     break;
-   case selectedValue = "ShowPOD":
-      this.docTitle = 'Show POD';
-     break;
-    }
-   }
+  //   switch(selectedValue){
+  //    case selectedValue = "ShowInvoice":
+  //    this.docTitle = 'Show Invoice';
+  //    break;
+  //  case selectedValue = "ShowLR":
+  //    this.docTitle = 'Show LR';
+  //    break;
+  //  case selectedValue = "ShowPOD":
+  //     this.docTitle = 'Show POD';
+  //    break;
+  //   }
+  //  }
 }
 

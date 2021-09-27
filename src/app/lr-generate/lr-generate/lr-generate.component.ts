@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-lr-generate',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lr-generate.component.css']
 })
 export class LrGenerateComponent implements OnInit {
-
+  @ViewChild('content', {static: false}) content: ElementRef;
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+    
+  }
 
-}

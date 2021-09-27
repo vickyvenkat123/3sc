@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+.form-group {
+  margin-bottom: 1rem;
+=======
 .example-additional-selection {
     opacity: 0.75;
     font-size: 0.75em;
@@ -26,4 +30,42 @@
 }
 th.mat-header{
   font-style: bold;
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
+}
+.table{
+  width: 100%;
+}
+.showentries{
+  margin-left: 50rem;
+}
+.table{
+  border: 1px solid #ddd;
+}
+label{
+  font-family: 'serif';
+  font-weight: normal;
+  display: inline-block;
+    margin-bottom: 3.2rem;
+}
+.table>tbody>tr>td{
+  padding: 12px;
+  font-weight: 400;
+}
+.card-body {
+  margin-right: 0.5rem;
+  background-color: white;
+}
+.table-bordered>thead>tr>th {
+  border-bottom-width: 2px;
+  font-weight: 500;
+}
+.pagination{
+  margin-left: 45em;
+  margin-top: -2rem;
+}
+.dataTables_info{
+  margin-left: 3px;
+}
+.form-group{
+  margin: left 1.5rem;
 }

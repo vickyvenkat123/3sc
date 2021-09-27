@@ -1,12 +1,23 @@
+<<<<<<< HEAD
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+=======
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 
 @Injectable({
   providedIn: 'root'
 })
 export class MastersService {
 
+<<<<<<< HEAD
+  constructor(public http : HttpClient) { }
+  getMastersData(){
+    return this.http.get('https://api.covid19api.com' ,{responseType: 'blob'});
+  }
+=======
  
   constructor(private http : HttpClient) { }
   getMastersData() {
@@ -19,4 +30,5 @@ export class MastersService {
   // }
  
 
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-upload-docs',
@@ -6,17 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./upload-docs.component.css'],
 })
 export class UploadDocsComponent implements OnInit {
-  public filterDocTypes = [
-    { value: 'uploadInvoice', viewValue: 'Upload Invoice File' },
-    { value: 'uploadLR', viewValue: 'Upload LR' },
-    { value: 'uploadPO', viewValue: 'Upload PO' },
-    { value: 'uploadPOD', viewValue: 'Upload POD' },
-    { value: 'uploadContract', viewValue: 'Upload Contract' }
-  ];
+  // public filterDocTypes = [
+  //   { value: 'uploadInvoice', viewValue: 'Upload Invoice File' },
+  //   { value: 'uploadLR', viewValue: 'Upload LR' },
+  //   { value: 'uploadPO', viewValue: 'Upload PO' },
+  //   { value: 'uploadPOD', viewValue: 'Upload POD' },
+  //   { value: 'uploadContract', viewValue: 'Upload Contract' },
+  //   { value: 'uploadInvoice', viewValue: 'Upload Invoice' },
+  //   { value: 'uploadSupportedDoc', viewValue: 'Upload Supported Doc' }
+  // ];
   docTitle: string = "Upload Documents";
-  constructor() {}
+  message: any;
+  filterDocTypes=[];
+  constructor(public data : DataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.data.currentMessage.subscribe(message => this.message = message)
+    console.log(this.message)
+    this.getFilterDocTypes(this.message);
+  }
   myFunction() {}
 
   filterChanged(selectedValue: any) {
@@ -37,7 +46,29 @@ export class UploadDocsComponent implements OnInit {
     default:
       this.docTitle = 'Upload Contract File';
     break;
+    case selectedValue = "uploadInvoice":
+    this.docTitle = 'Upload Invoice File';
+    break;
+    case selectedValue = "uploadSupportedDoc":
+    this.docTitle = 'Upload Supported Doc File';
+    break;
 
    }
+  }
+  getFilterDocTypes(type){
+if (type == "2"){
+  this.filterDocTypes = [
+   
+       { value: 'uploadInvoice', viewValue: 'Upload Invoice' },
+       { value: 'uploadSupportedDoc', viewValue: 'Upload Supported Doc' }
+     ];
+}
+this.filterDocTypes =[
+  { value: 'uploadInvoice', viewValue: 'Upload Invoice File' },
+     { value: 'uploadLR', viewValue: 'Upload LR' },
+     { value: 'uploadPO', viewValue: 'Upload PO' },
+     { value: 'uploadPOD', viewValue: 'Upload POD' },
+     { value: 'uploadContract', viewValue: 'Upload Contract' },
+];
   }
 }

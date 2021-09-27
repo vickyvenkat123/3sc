@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ChoosemoduleComponent } from './choosemodule/choosemodule.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+// import { ExportDashboardComponent } from './export-dashboard/export-dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
-import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { UploadDocsModule } from './upload-docs/upload-docs.module';
@@ -13,7 +14,8 @@ const routes: Routes = [
   canActivate : [AuthGuard]
  },
   { path: "", redirectTo: "login", pathMatch: "full"},
-  {path: "home", component:HomeComponent},
+  {path:'chooseModule',component:ChoosemoduleComponent},
+  // {path:'export-dashboard',component:ExportDashboardComponent},
   {path: "dashboard", component:DashboardComponent, canActivate:[AuthGuard],
   children:[
     // {path: "masters", component:MastersComponent},
@@ -21,6 +23,7 @@ const routes: Routes = [
     // {path: "masters", component:MastersComponent},
     // {path: "masters", component:MastersComponent},
     // {path: "masters", component:MastersComponent},
+    
     {
       path: 'alert-notification', 
       loadChildren: () => import('./alert-notication/alert-notication.module').then( m => m.AlertNoticationModule)

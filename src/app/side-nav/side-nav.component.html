@@ -26,12 +26,14 @@
             <span class="ml10">Show Documents</span>
           </a>
         </li>
-        <li class="nav-item" [ngClass]="{'active-link': step==='step5'}" (click)="step='step5'">
+
+        <li class="nav-item" [ngClass]="{'active-link': step==='step5'}" (click)="step='step5'" *ngIf="showLrgenerateMenu">
           <a class="nav-link" routerLink="/dashboard/lr-generate">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span class="ml10">LR Generate</span>
           </a>
         </li>
+
         <li class="nav-item" [ngClass]="{'active-link': step==='step6'}" (click)="step='step6'">
           <a class="nav-link" routerLink="/dashboard/audit-reports">
             <i class="fas fa-fw fa-tachometer-alt"></i>

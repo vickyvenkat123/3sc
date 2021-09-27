@@ -1,3 +1,174 @@
+<<<<<<< HEAD
+<div class="container-fluid ">
+    <div class=" ">
+        <div class="card ">
+            <div class=" ">
+
+
+                <!-- invoice no -->
+                <div class="form-group row jumbrotron">
+                    <label class="control-label text-left col-lg-2">Invoice No</label>
+                    <div class="col-lg-4">
+                        <label id="invoicenosearch" style="width:100%">
+                            <select class="form-control invoice">
+                                <!-- <option value=""></option> -->
+                            </select>
+                        </label>
+                    </div>
+                    <!-- carrier -->
+                    <label class="control-label text-left col-lg-2">Carrier</label>
+                    <div class="col-lg-4">
+                        <label id="carriersearch" style="width:100%">
+                            <select class="form-control carrier">
+                                <!-- <option value=""></option> -->
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <!-- Invoice Date From -->
+                <div class="form-group row">
+                    <label class="control-label text-left col-lg-2">Invoice Date From</label>
+                    <div class="col-lg-4">
+                        <input type="date" class="form-control" id="fromdate"
+                            onchange="javascript:dataFilterOnDate()" />
+                    </div>
+                    <!-- Invoice Date To -->
+                    <label class="control-label text-left col-lg-2">Invoice Date To</label>
+                    <div class="col-lg-4">
+                        <input type="date" class="form-control" id="todate" onchange="javascript:dataFilterOnDate()" />
+                    </div>
+                </div>
+                <!-- Deviation -->
+                <div class="form-group row">
+                    <label class="control-label text-left col-lg-2">Deviation</label>
+                    <div class="col-lg-4">
+                        <label id="Deviationsearch2" style="width:100%">
+                            <select class="form-control devation">
+                                <!-- <option value=""></option> -->
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <label>Search:<input type="search" class="search" placeholder="" aria-controls="invoicedataTable"></label>
+                    <label class="showentries">Show <select name="invoicedataTable_length" aria-controls="invoicedataTable">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select> entries</label>
+                    <table class="table table-bordered" id="AuditReport_Domestic_CT" style="font-size:12px; color:#000;">
+                        <thead>
+                            <tr>
+                                <th style="vertical-align:top;">#</th>
+                                <th style="vertical-align:top;">Invoice No</th>
+                                <th style="vertical-align:top;">Invoice&nbsp;Date</th>
+                                <th style="vertical-align:top;">Carrier</th>
+                                <th style="vertical-align:top;">Invoice Amount</th>
+                                <th style="vertical-align:top;">Deviation</th>
+                                <th style="vertical-align:top;">Deviation Amount</th>
+                                <th style="vertical-align:top;">Remarks</th>
+                                <th style="vertical-align:top;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>09N121T00094</td>
+                                <td>06-04-2021</td>
+                                <td>V Trans (India) Limited</td>
+                                <td>6067.00</td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" class="form-control" id="_txt1" /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript:test('a');" /></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>DLH-2002731</td>
+                                <td>06-02-2021</td>
+                                <td>Express Roadways Pvt Ltd</td>
+                                <td>79520.00 </td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" class="form-control" id="_txt2" /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript:test('b');" /></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>307/2020-21</td>
+                                <td>30-03-2021 </td>
+                                <td>Jay Mahakali Transport</td>
+                                <td>101228.04 </td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" id="_txt3" class="form-control" required /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript:test('c');" /></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>DI3408007252</td>
+                                <td>31-03-2021 </td>
+                                <td>CJ DARCL Logistics Limited</td>
+                                <td>15800.00 </td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" class="form-control" id="_txt4" /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript:test('d');" /></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>DI3409006284</td>
+                                <td>31-03-2021</td>
+                                <td>CJ DARCL Logistics Limited </td>
+                                <td>35438.00 </td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" id="_txt5" class="form-control" required /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript: test('e');" /></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>DI3409006285</td>
+                                <td>31-03-2021 </td>
+                                <td>CJ DARCL Logistics Limited </td>
+                                <td>122740.00 </td>
+                                <td>No</td>
+                                <td>0.00</td>
+                                <td style="width:150px;"><input type="text" class="form-control" id="_txt6" /></td>
+                                <td><input type="button" value="Send to finance" class="btn btn-success" style="background-color:lightseagreen; color:white" onclick="javascript:test('f');" /></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>DLH-200</td>
+                                <td>06-02-2021</td>
+                                <td>Express Roadways Pvt Ltd</td>
+                                <td>79520.00</td>
+                                <td style="color:red">Yes</td>
+                                <td>-2542.86 </td>
+                                <td style="width:150px;"><input type="text" class="form-control" id="_txt9" /></td>
+                                <td>
+                                    <div><input type="button" value="Send to Vendor" class="btn btn-success" onclick="javascript:SendVendor('e')" /></div><br />
+                                    <div><input type="button" value="Generate CN" class="btn btn-success" onclick="javascript:GenerateCN('e','DLH-200')" /></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class=" row dataTables_info" id="invoicedataTable_info" role="status" aria-live="polite">Showing 1 to
+                        5 of 10 entries
+                    </div>
+                           <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                          </ul>
+                     </div>
+            </div>
+        </div>
+    </div>
+=======
 <!-- <div class="container-fluid">
     <div class="col-xl-12 col-lg-12">
         <mat-card>simple card</mat-card>
@@ -130,4 +301,5 @@
 
     </div>
   </mat-card>
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 </div>

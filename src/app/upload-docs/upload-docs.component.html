@@ -1,16 +1,16 @@
-<div  class="col-xs-12 col-md-12 col-lg-12">
+<div class="col-xs-12 col-md-12 col-lg-12">
     <div>
         <mat-form-field appearance="outline">
             <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Choose Documents" #input> -->
             <mat-select (selectionChange)="filterChanged($event.value)">
-              <mat-option  *ngFor="let doc of filterDocTypes" [value]="doc.value">
-                {{ doc.viewValue }}
-              </mat-option>
+                <mat-option *ngFor="let doc of filterDocTypes" [value]="doc.value">
+                    {{ doc.viewValue }}
+                </mat-option>
             </mat-select>
-          </mat-form-field>
+        </mat-form-field>
     </div>
-<mat-card>
-    <!-- <div align="start">
+    <mat-card>
+        <!-- <div align="start">
         <table>
             <tbody><tr>
                 <td>{{docTitle}}:</td>
@@ -18,18 +18,20 @@
                 <td><button style="margin-left: 10px;"class="btn btn-primary" (click)="myFunction()">Submit</button></td>
             </tr>
         </tbody></table> -->
-        <div fxFlex="50%;"  fxLayout.xs="column">
-            <div fxLayout="column" >
+    <!-- shelza -->
+        <div fxFlex="50%;" fxLayout.xs="column">
+            <div fxLayout="column">
                 <div>{{docTitle}}:</div>
             </div>
-            <div fxLayout="column" >
+            <div fxLayout="column">
                 <div fxFlex="50%;">
                     <input id="_uploadinvoice" class="form-control" type="file" accept="application/pdf">
                     <div fxFlex="20%;">
-                    <button style="margin-left: 15px;"class="btn btn-primary" (click)="myFunction()">Submit</button>
-                </div>
+                        <button style="margin-left: 15px;" class="btn btn-primary"
+                            (click)="myFunction()">Submit</button>
+                    </div>
                 </div>
             </div>
-    </div>
-</mat-card>
+        </div>
+    </mat-card>
 </div>

@@ -1,40 +1,52 @@
-<div class="container-fluid">
-    
-    <img src="/assets/images/Logo.png" style="width: 15%;">
-    <div class="login-block">
-        <div class="login-form">
-            <form class="user" >
-                <img src="/assets/images/3SC-logo-white.png" height="40" width="40">
-                <h2 class="text-center"><b>Welcome Back!</b></h2>
-                <div class="form-group">
-                    <select class="form-control custom-select" id="Type" name="Type">
-                        <option value="CarrierVendor">Carrier/Vendor</option>
-                        <option value="ControlTower">Control Tower</option>
-                        <option value="ClientFinance">Client Finance</option>
-                        <option value="ClientManagement">Client Management</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-user"  id="Username" name="Username" placeholder="Username"
-                        required="required" type="text" value="">
-
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-user" id="Password" name="Password" placeholder="Password"
-                        required="Password" type="Password">
-
-                </div>
-                <div class="form-group">
-                    <button type="button" (click)="navigateHome()" class="btn btn-primary btn-user btn-block">Login</button>
-                </div>
-                <div class="clearfix action-buttons">
-                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                    <a href="#" class="pull-right">Forgot Password?</a>
-                </div>
-            </form>
-            <div class="text-center small" style="color: black;">Don't have an account? <a href="#">Sign up
-                    here!</a>
+<div class="container-fluid mainbackground">
+    <div class="row main">
+        <div class="col-lg-2 col-md-2 col-sm-12">
+            <div>
+                <img src="../../assets/images/fast.png" class="img-fluid" alt="hghjg">
             </div>
+            <ul class="ulMenu">
+                <li [ngStyle]="{'border-left': item.value === activeLeftMenu ? ('4px solid #56a647') : '' }"
+                    class="liMenu" *ngFor="let item of menus;" (click)="changeMenuLabel(item.value)">
+                    <img class="img-fluid vendor-img" src='{{ "../../assets/images/" + item.imgname+ ".png" }}'>
+                    {{item.name}}
+                </li>
+            </ul>
         </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 txtdivHidden"></div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <form [formGroup]="loginReactiveForm" (ngSubmit)="onSubmit()">
+
+                <h1 class="h1FontSize">{{msg}} Log in</h1>
+
+                <select [(ngModel)]="selectedValue" formControlName="activaDropdownMenu" (change)="changeClient()"
+                    class="dropdownMenu" id="dropMenuiId">
+                    <!-- <option value="" disabled>--Select--</option> -->
+                    <option *ngFor="let item of menus" value="{{item.value}}">{{item.name}}</option>
+                </select>
+
+                <input id="email" type="text" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <span *ngIf="f.email.errors.required">Email is required</span>
+                    <span *ngIf="f.email.errors.email">Email must be a valid email address</span>
+                </div>
+
+                <input id="password" type="password" formControlName="pass"
+                    [ngClass]="{ 'is-invalid': submitted && f.pass.errors }" placeholder="Password">
+                <div *ngIf="submitted && f.pass.errors" class="invalid-feedback">
+                    <div *ngIf="f.pass.errors.required">Password is required</div>
+                </div>
+
+                <button type="submit">Submit</button>
+                <a [routerLink]="[]" (click)="forGotPassword()">Forgot your password?</a>
+
+            </form>
         </div>
     </div>
+    <div class="txtdiv">
+        <h1 class="content">Welcome to 3SC</h1>
+        <p class="Dyn-content"><span class="spanTxtHead">Select : </span> <span class="spanTxtPara">{{msg}}</span></p>
+    </div>
+
+</div>

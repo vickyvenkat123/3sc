@@ -4,7 +4,11 @@
     background-color: #FFFFFF !important;
     padding: .75rem 1.25rem;
     margin-left: -15px;
+<<<<<<< HEAD
+    border: 1px solid #808080;
+=======
     border:1px solid black;
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 }
 .box-body{
 height: max-content;
@@ -39,7 +43,11 @@ label{
     margin-bottom: 0;
     background-color: rgba(0,0,0,.03);
     border-bottom: 1px solid rgba(0,0,0,.125);
+<<<<<<< HEAD
+    border: 1px solid #808080;
+=======
     border: 1px solid black;
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 }
 .card{
     margin-left: -15px;

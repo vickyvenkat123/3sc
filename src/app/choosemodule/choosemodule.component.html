@@ -1,0 +1,24 @@
+<div class="maincontainer">
+    <div class="contentMainContainer">
+      <div class="card">
+          <div class="fastLogoDiv">
+            <img src="../../assets/images/fast.png" class="img-fluid fastLogo" alt="hghjg">
+          </div>
+          <div>
+            <h1 class="h1FontSize">Choose Module</h1>
+          </div>
+          <form [formGroup]="chooseModuleForm" (ngSubmit)="onSubmit()">
+              <select class="dropdownMenu" [(ngModel)]="chooseModule" id="dropMenuiId" formControlName="selectedMenu" (change)="changeClient($event)">
+                <option value="" disabled>--Select--</option>
+                <option *ngFor="let item of mechooseModuleMenu" value="{{item.value}}">{{item.name}}</option>
+              </select>
+    
+              <button type="submit">Submit</button>
+              <a href="#">Forgot your password?</a>
+          </form>
+    
+      </div>
+    </div>
+    </div>
+
+    

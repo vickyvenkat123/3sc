@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .maincontainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background-image: linear-gradient(rgb(242 242 251 / 50%), #d3d8e0);
+    color: #232020ad;
+  }
+  
+  .contentMainContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    transform-style: preserve-3d;
+    min-height: 60vh;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    /* box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%), 0px 0px 15px rgb(0 0 0 / 20%);
+  }
+  .fastLogoDiv{
+    text-align: center;
+  }
+  
+  .fastLogo {
+    width: 65%;
+    margin-top: -7%;
+  }
+  .h1FontSize{
+    font-size: 1.4em;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  blockquote, body, code, dd, div, dl, dt, fieldset, select, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+  }
+  input, select {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.9em;
+  }
+  button {
+    border-radius: 30px;
+    border: 1px;
+    background-color: rgb(86, 166, 71);
+    color: #FFFFFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0px 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+  }
+  button:focus {
+    outline: 1px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+
+  a {
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  
+  form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Start Media Query */
+  
+  @media (max-width:1280px) {
+  
+  
+  
+  
+  }
+  @media (max-width:1024px) {  
+    .contentMainContainer {
+      width: 55%;
+    }
+    .card {
+      min-height: 55vh;
+    }
+  
+  }
+  @media (max-width:979px) {
+  
+  
+  
+  }
+  @media (min-width:768px) and (max-width:979px) {
+  
+  }
+  
+  
+  @media (min-width:768px) and (max-width:880px) {
+  
+  
+  }
+  @media (max-width:768px) {
+    .contentMainContainer {
+      width: 73%;
+    }
+    .card {
+      min-height: 37vh;
+    }
+  
+  }
+  @media only screen and (min-width:700px) {
+  
+  
+  }
+  @media (max-width:767px) {  
+  
+  
+  
+  }
+  
+  @media only screen and (min-width:0) and (max-width:679px) {
+    .card {
+      padding: 0rem 2rem;
+    }
+  
+  }
+  @media screen and (max-width:600px) {
+  
+  
+  }
+  @media (max-width:480px) {
+  
+  
+  }
+  @media only screen and (min-width:320px) and (max-width:479px) {
+  
+    .contentMainContainer {
+      width: 90%;
+  }
+  .card {
+    padding: 0rem 2rem;
+  }
+  form {
+    padding: 0px 0px;
+  }
+  
+  }

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit {
   name ="Devansh Verma"
   constructor(private router: Router, @Inject(DOCUMENT) private _document,private renderer: Renderer2 ) {}

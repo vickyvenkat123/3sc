@@ -40,7 +40,11 @@ export class MastersComponent implements OnInit {
     this.selectedFiles = event.target.files;
 }
   uploadFile() {
+<<<<<<< HEAD
+    this.currentFileUpload = this.selectedFiles.item();
+=======
     this.currentFileUpload = this.selectedFiles.item(0);
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
     this.globalService.pushFileToStorage(this.currentFileUpload).subscribe(event => {
         if (event instanceof HttpResponse) {
             this.loadDocumentInfo();
@@ -51,10 +55,17 @@ export class MastersComponent implements OnInit {
     this.selectedFiles = undefined;
 }
   showNotification(arg0: string, arg1: string, arg2: string) {
+<<<<<<< HEAD
+    console.log('file upload Successfully')
+  }
+  loadDocumentInfo() {
+   console.log('file loaded Successfully')
+=======
     throw new Error('Method not implemented.');
   }
   loadDocumentInfo() {
     throw new Error('Method not implemented.');
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
   }
   showLastShippingStatus(){
     this.showLastShipping = true;
@@ -68,9 +79,14 @@ downloadFile() {
     this.masters.getMastersData().subscribe(response => {
 			let blob:any = new Blob([response], { type: 'text/json; charset=utf-8' });
 			const url = window.URL.createObjectURL(blob);
+<<<<<<< HEAD
+			 fileSaver.saveAs(blob, 'pdf');
+     // window.open(url);
+=======
 			//window.open(url);
 			//window.location.href = response.url;
 			fileSaver.saveAs(blob, 'pdf');
+>>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 		}), error => console.log('Error downloading the file'),
                  () => console.info('File downloaded successfully');
   }

@@ -44,10 +44,10 @@
     background-color: #f4f5fe;
   } */
   .active-link{
-    background-color: #c4c8ca;
-      margin-right: 15px;
-      border-radius: 15px;
-      color: #ccd0d6;
+    background-color: #eeeef5;
+      /* margin-right: 15px; */
+      /* border-radius: 15px; */
+      /* color: #ccd0d6; */
   }
   .active-text{
     color: #fff;
@@ -83,4 +83,14 @@
       float:right;
       padding-right:10px;
     }
-  
+
+    .fa, .fas {
+      font-weight: 900;
+      color: #73777b;
+  }
+  span{
+    margin-left: 5px;
+    color: #73777b;
+    font-weight: bold;
+  }
+

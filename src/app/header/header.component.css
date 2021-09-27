@@ -1,11 +1,15 @@
 .logo{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     background-color: #fff;
 }
 
 .bg-logo{
-    width: 70%;
+    width: 40%;
     height: auto;
     object-fit: contain;
+}
+.text-center {
+    text-align: center!important;
+    border-bottom: 2px solid #939598;
 }
