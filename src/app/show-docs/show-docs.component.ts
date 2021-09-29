@@ -11,11 +11,22 @@ export class ShowDocsComponent implements OnInit {
   
   fileURL: any;
   dataDocsSource: any;
+  docTitle: string= "Show Documents"
+  message: any;
+  filterDocTypes: { value: string; viewValue: string; }[];
+  showInvoiceTable:boolean = true;
+  showDocumentFile: boolean = false;
+  showLRFile:boolean=true;
+  showInvoiceTable2: boolean=true;
    constructor( public data : DataService) {}
    ngOnInit(){
      this.getData();
+     this.data.currentMessage.subscribe(message => this.message = message)
+    console.log(this.message)
+    this.getFilterDocTypes(this.message);
      
    }
+  
    openfile() {
     this.data.getTableDataView().subscribe((_response: any) => {
 			let blob:any = new Blob([ _response], { type: 'text/json; charset=utf-8' });
@@ -38,20 +49,58 @@ export class ShowDocsComponent implements OnInit {
        this.dataDocsSource = res;
      })
    }
+   getFilterDocTypes(type) {
 
-  // filterChanged(selectedValue: any) {
+    if (type === "1") {
+      this.filterDocTypes = [
+        
+            { value: 'ShowInvoice1', viewValue: 'Show Invoice File1' },
+            { value: 'Show LR', viewValue: 'Show LR File' },
+            { value: 'Show POD', viewValue: 'Show POD File' },
+        ];
+      
+    }
+    if (type !== "1"){
+      this.filterDocTypes=[
+       
+        { value: 'ShowInvoice', viewValue: 'Show Invoice File' },
+        { value: 'ShowSupportedDoc', viewValue: 'Show Supported Document File' }
+      ];
+    }
+  }
 
-  //   switch(selectedValue){
-  //    case selectedValue = "ShowInvoice":
-  //    this.docTitle = 'Show Invoice';
-  //    break;
-  //  case selectedValue = "ShowLR":
-  //    this.docTitle = 'Show LR';
-  //    break;
-  //  case selectedValue = "ShowPOD":
-  //     this.docTitle = 'Show POD';
-  //    break;
-  //   }
-  //  }
+  filterChanged(selectedValue) {
+    console.log(selectedValue)
+    this.showInvoiceTable = false;
+    this.showDocumentFile = false;
+        switch(selectedValue){
+          case selectedValue = "ShowInvoice":
+          this.docTitle = 'Show Invoice';
+          this.showInvoiceTable = true;
+          
+         break;
+       case selectedValue = "ShowLR":
+         this.docTitle = 'Show LR';
+         this.showLRFile = true;
+         break;
+       case selectedValue = "ShowPOD":
+          this.docTitle = 'Show POD';
+         break;
+         case selectedValue = "ShowInvoice":
+          this.docTitle = 'Show Invoice';
+          this.showInvoiceTable = true;
+         break;
+         case selectedValue = "ShowSupportedDoc":
+          this.docTitle = 'Show Supported Document File ';
+          this.showDocumentFile = true;
+         break;
+        }
+       }
+  //  public filterDocTypes = [
+  //    {value: ' ', viewValue: ' '},
+  //      { value: 'ShowInvoice', viewValue: 'Show Invoice File' },
+  //      { value: 'Show LR', viewValue: 'Show LR File' },
+  //      { value: 'Show POD', viewValue: 'Show POD File' },
+  //  ];
 }
 

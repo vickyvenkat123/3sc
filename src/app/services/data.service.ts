@@ -9,7 +9,7 @@ export class DataService {
  
 
    profileObs$: BehaviorSubject<any> = new BehaviorSubject<any>(true);
-   private messageSource = new BehaviorSubject("default message");
+   private messageSource = new BehaviorSubject('');
    currentMessage = this.messageSource.asObservable();
 
   constructor(public http : HttpClient) { }
@@ -19,8 +19,8 @@ export class DataService {
   getTableData(){
     return this.http.get('../assets/json/tableData.json');
   }
-  changeMessage(message: string) {
-    this.messageSource.next(message)
+  changeMessage(num: any) {
+    this.messageSource.next(num)
   }
 
 }

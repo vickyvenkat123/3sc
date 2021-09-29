@@ -1,36 +1,5 @@
-<<<<<<< HEAD
 .form-group {
   margin-bottom: 1rem;
-=======
-.example-additional-selection {
-    opacity: 0.75;
-    font-size: 0.75em;
-  }
-  .show-items{
-    display: flex;
-    justify-content: flex-end; 
-    margin-top: -25px;
-  }
-  .mat-card{
-      height: 500px;
-  }
-  table {
-    width: 100%;
-    height: 250px;
-  }
- td, th {
-    width: 25%;
-  }
-  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
-    padding: 8px;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border: 1px solid #808080;
-    font-style: bold;
-}
-th.mat-header{
-  font-style: bold;
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 }
 .table{
   width: 100%;
@@ -68,4 +37,8 @@ label{
 }
 .form-group{
   margin: left 1.5rem;
+}
+.lrpagination{
+  margin-left: 45em;
+  margin-top: -2rem;
 }

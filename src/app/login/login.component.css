@@ -145,7 +145,6 @@
     outline: 1px dotted;
     outline: 0px auto -webkit-focus-ring-color;
 }
-<<<<<<< HEAD
   .h1FontSize{
     font-size: 1em;
     margin: 10px;
@@ -371,11 +370,3 @@
   
     
   }
-=======
-.action-buttons .checkbox-inline{
-flex: 1;
-}
-.bodybg-color{
-    background-image: linear-gradient(rgb(242 242 251 / 50%), #d3d8e0);
-}
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68

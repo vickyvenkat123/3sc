@@ -8,13 +8,8 @@ import { DataService } from '../services/data.service';
 })
 export class SideNavComponent implements OnInit {
   step:any = "step2";
-<<<<<<< HEAD
   constructor(private _ds : DataService) { }
   showLrgenerateMenu : boolean=false;
-=======
-  constructor() { }
-
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
   ngOnInit(): void {
     this._ds.profileObs$.subscribe(res =>{
       this.showLrgenerateMenu =res;

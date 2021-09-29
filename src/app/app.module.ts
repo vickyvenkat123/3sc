@@ -18,11 +18,8 @@ import { LrGenerateComponent } from './lr-generate/lr-generate/lr-generate.compo
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuditReportsComponent } from './audit-reports/audit-reports/audit-reports.component';
-<<<<<<< HEAD
 import { ChoosemoduleComponent } from './choosemodule/choosemodule.component';
 // import { ExportDashboardComponent } from './export-dashboard/export-dashboard.component';
-=======
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
 
 
 
@@ -37,13 +34,9 @@ import { ChoosemoduleComponent } from './choosemodule/choosemodule.component';
    ShowDocsComponent,
     LrGenerateComponent,
     SideNavComponent,
-<<<<<<< HEAD
     AuditReportsComponent,
     ChoosemoduleComponent,
     // ExportDashboardComponent
-=======
-    AuditReportsComponent
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
   ],
   imports: [
     BrowserModule,

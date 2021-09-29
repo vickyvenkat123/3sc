@@ -37,11 +37,13 @@ changeClient(e:any){
   get f() { return this.chooseModuleForm.controls; }
 
   onSubmit() {
-    if(this.chooseModule == 2){
+    if(this.chooseModule === "2"){
       this._ds.profileObs$.next(false)
       this._ds.changeMessage("2")
       }
+      this._ds.changeMessage("1")
       this.router.navigate(['dashboard']);
+      
 }
 
 

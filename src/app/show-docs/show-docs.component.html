@@ -1,17 +1,21 @@
 <div class="col-xl-12 col-lg-12">
   <div class=" row form-group">
-    <label for="sel1">Select Document :</label>
-    <select class="form-control col-lg-2 dropdown">
-      <option>Show Invoice</option>
-      <option>Show LR</option>
-      <option>Show POD</option>
-    </select>
+    <div>
+      <mat-form-field appearance="outline">
+        <!-- <input matInput (keyup)="applyFilter($event)" placeholder="Choose Documents" #input> -->
+        <mat-select (selectionChange)="filterChanged($event.value)">
+          <mat-option *ngFor="let doc of filterDocTypes" [value]="doc.value">
+            {{ doc.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
   </div>
 </div>
 <div class="container-fluid">
   <div class=" ">
     <div id="accordion">
-      <div class="card">
+      <div class="card" *ngIf="showInvoiceTable">
         <div class="card-body">
           <label>Search:<input type="search" class="" placeholder="" aria-controls="invoicedataTable"></label>
           <label class="showentries">Show <select name="invoicedataTable_length" aria-controls="invoicedataTable">
@@ -88,16 +92,106 @@
               <div class=" row dataTables_info" id="invoicedataTable_info" role="status" aria-live="polite">Showing 1 to
                 5 of 10 entries
               </div>
-                   <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                  </ul>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="card" *ngIf="showLRFile">
+        <div class="card-body">
+          <label>Search:<input type="search" class="" placeholder="" aria-controls="invoicedataTable"></label>
+          <label class="showentries">Show <select name="invoicedataTable_length" aria-controls="invoicedataTable">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select> entries</label>
+          <div class="form-group row" style="width:100%">
+            <div class="table-responsive" align="left">
+              <table class="table table-bordered" id="invoicedataTable" style="font-size:12px; color:#000;">
+                <thead>
+                  <tr>
+                    <th style="vertical-align:top;">#</th>
+                    <th style="vertical-align:top;">LR No</th>
+                    <th style="vertical-align:top;">LR Date</th>
+                    <th style="vertical-align:top;">Vendor Name</th>
+                    <th style="vertical-align:top;">View File</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input id="view1" type="button" onclick="openfile(' ')"
+                        value="View file" /></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input id="view1" type="button" onclick="openfile(' ')"
+                        value="View file" /></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input id="view1" type="button" onclick="openfile(' ')"
+                        value="View file" /></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input id="view1" type="button" onclick="openfile(' ')"
+                        value="View file" /></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input id="view1" type="button" onclick="openfile(' ')"
+                        value="View file" /></td>
+                  </tr>
+                </thead>
+              </table>
+              <div *ngIf="showDocumentFile">
+                <div class="container-fluid">
+                  <div class="col-xl-12 col-lg-12">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-sm-2">
+                                Invoice Number
+                              </div>
+                              <div class="col-sm-4">
+                                <select class="form-control">
+                                  <option>Select Invoice</option>
+                                  <option>DEL/FC/12902</option>
+                                  <option>5021381198</option>
+                                  <option>5021386643</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
     {"position": 1, "name": "09N121T00094", "weight": "01.04.2021", "symbol": "V Trans (India) Limited","Amount":"7765.00","Deviation":"no", "Deviation Amount":"0.00"},
     {"position": 2, "name": "DLH-2002731", "weight": "05.05.2021", "symbol": "Express Roadways Pvt Ltd","Amount":"1500.00","Deviation":"yes", "Deviation Amount":"1876.00"},
     {"position": 3, "name": "307/2020-21", "weight": "20.06.2021", "symbol": "Jay Mahakali Transport","Amount":"8764.00","Deviation":"no", "Deviation Amount":"0.00"},
@@ -7,18 +6,3 @@
     {"position": 5, "name": "DI3409006284", "weight": "30.08.2021", "symbol": "Express Roadways Pvt Ltd","Amount":"8662.00","Deviation":"yes", "Deviation Amount":"872.00"}
     
   ]
-=======
-    {"position": 1, "name": "09N121T00094", "weight": "01.04.2021", "symbol": "V Trans (India) Limited","Amount":"7765.00","Deviation":"no", "DAmount":"3455.00"},
-    {"position": 2, "name": "DLH-2002731", "weight": "05.05.2021", "symbol": "Express Roadways Pvt Ltd","Amount":"1500.00","Deviation":"yes", "DAmount":"9876.00"},
-    {"position": 3, "name": "307/2020-21", "weight": "20.06.2021", "symbol": "Jay Mahakali Transport","Amount":"8764.00","Deviation":"no", "DAmount":"776.00"},
-    {"position": 4, "name": "DI3408007252", "weight": "25.07.2021", "symbol": "CJ DARCL Logistics Limited","Amount":"0754.00","Deviation":"yes", "DAmount":"5876.00"},
-    {"position": 5, "name": "DI3409006284", "weight": "30.08.2021", "symbol": "Express Roadways Pvt Ltd","Amount":"8662.00","Deviation":"yes", "DAmount":"872.00"}
-    
-  ]
-
-
-
-
-
- 
->>>>>>> 6efe80cfa8f90ccf7b13ed69da83bcb4fc803e68
