@@ -16,13 +16,9 @@ const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full"},
   {path:'chooseModule',component:ChoosemoduleComponent},
   // {path:'export-dashboard',component:ExportDashboardComponent},
-  {path: "dashboard", component:DashboardComponent, canActivate:[AuthGuard],
+  {path: "dashboard/:id", component:DashboardComponent, canActivate:[AuthGuard],
   children:[
-    // {path: "masters", component:MastersComponent},
-    // {path: "uploaddocs", component:UploadDocsComponent},
-    // {path: "masters", component:MastersComponent},
-    // {path: "masters", component:MastersComponent},
-    // {path: "masters", component:MastersComponent},
+ 
     
     {
       path: 'alert-notification', 
@@ -37,7 +33,7 @@ const routes: Routes = [
       loadChildren: () => import('./upload-docs/upload-docs.module').then(m => m.UploadDocsModule)
     },
     {
-      path: 'show-docs',
+      path: 'show-docs/:id',
       loadChildren: () => import('./show-docs/show-docs.module').then(m => m.ShowDocsModule)
     },
     {

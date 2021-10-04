@@ -21,6 +21,7 @@ export class DataService {
   }
   changeMessage(num: any) {
     this.messageSource.next(num)
+    localStorage.setItem('type',num);
   }
 
 }

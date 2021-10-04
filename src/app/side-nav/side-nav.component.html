@@ -22,7 +22,7 @@
           </a>
         </li>
         <li class="nav-item" [ngClass]="{'active-link': step==='step4'}" (click)="step='step4'">
-          <a  class="nav-link" routerLink="/dashboard/show-docs">
+          <a  class="nav-link" (click)="navigateShowDocs()">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span class="ml10">Show Documents</span>
           </a>

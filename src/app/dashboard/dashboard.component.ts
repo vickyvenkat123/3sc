@@ -1,7 +1,7 @@
 
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -9,17 +9,14 @@ import { Router } from '@angular/router';
 })
 
 export class DashboardComponent implements OnInit {
+  moduleSelected: any;
 
-  constructor(private router: Router, @Inject(DOCUMENT) private _document,private renderer: Renderer2 ) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
-    //this._document.body.classList.add('bodybg-color');
-    //this._document.body.style.background = '#fff';
-    this.renderer.addClass(this._document.body, 'bodybg-color');
+    this.moduleSelected = this.route.snapshot.paramMap.get('id');
   }
   ngOnDestroy() {
-    // remove the class form body tag
-    //this._document.body.classList.('bodybg-color-ff');
-    this.renderer.removeClass(this._document.body, 'bodybg-color');
+   
   }
   navigateMasters(){
       this.router.navigate(['/masters']);

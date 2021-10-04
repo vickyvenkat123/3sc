@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { DataService } from '../services/data.service';
 })
 export class SideNavComponent implements OnInit {
   step:any = "step2";
-  constructor(private _ds : DataService) { }
+  @Input() item;
+  constructor(private _ds : DataService,private router : Router) { }
   showLrgenerateMenu : boolean=false;
   ngOnInit(): void {
     this._ds.profileObs$.subscribe(res =>{
@@ -16,12 +18,9 @@ export class SideNavComponent implements OnInit {
 
     })
   }
-  // isLoggedIn(): boolean {
-  //   if (localStorage.getItem('isLoggedIn') == 'true') {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
+  navigateShowDocs(){
+    this.router.navigate(['/dashboard/'+this.item+'/show-docs', this.item]);
+  }
+
 }
 
